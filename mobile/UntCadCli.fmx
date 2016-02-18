@@ -1,0 +1,54 @@
+inherited frmCadCli: TfrmCadCli
+  Caption = 'frmCadModelo1'
+  DesignerMasterStyle = 3
+  inherited lytBase: TLayout
+    inherited tbctrlPrincipal: TTabControl
+      inherited tbitemListagem: TTabItem
+        ExplicitSize.cx = 160.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inherited toolSuperior: TToolBar
+          inherited lblTitulo: TLabel
+            Text = 'Cadastro de Clientes'
+          end
+        end
+        object lsviewLista: TListView
+          ItemAppearanceClassName = 'TListItemAppearance'
+          ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Size.Width = 320.000000000000000000
+          Size.Height = 383.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          OnItemClick = lsviewListaItemClick
+        end
+      end
+      inherited tbitemEdicao: TTabItem
+        ExplicitSize.cx = 160.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DM.qryClientes
+    ScopeMappings = <>
+    Left = 16
+    Top = 384
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 16
+    Top = 333
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'APELIDO'
+      Control = lsviewLista
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

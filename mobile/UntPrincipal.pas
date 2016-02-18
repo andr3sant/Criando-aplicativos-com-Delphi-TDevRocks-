@@ -52,6 +52,8 @@ implementation
 
 {$R *.fmx}
 
+uses UntCadCli;
+
 procedure TfrmPrincipal.AbrirForm(AFormClass: TComponentClass);
 var
   LayoutBase, BotaoMenu: TComponent;
@@ -89,7 +91,7 @@ end;
 
 procedure TfrmPrincipal.imgBotao1Click(Sender: TObject);
 begin
-  AbrirForm(TfrmClientes);       //Carrego o próximo form
+  AbrirForm(TfrmCadCli);       //Carrego o próximo form
   MudarAba(tbitemApoio, Sender); //Mudar aba do menu para o apoio (novo form)
 end;
 
