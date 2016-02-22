@@ -20,22 +20,52 @@ type
     lytMenu: TGridLayout;
     lytSuperior: TLayout;
     lytInferior: TLayout;
-    lytBotao1: TLayout;
-    rndBotao1: TRoundRect;
-    imgBotao1: TImage;
+    lytClientes: TLayout;
+    rndBtnCli: TRoundRect;
+    imgBtnCli: TImage;
     lytRotulos1: TLayout;
-    lblTituloBtn1: TLabel;
-    lblDescBtn1: TLabel;
+    lblTituloBtnCli: TLabel;
+    lblDescBtnCli: TLabel;
     ShadowEffect1: TShadowEffect;
-    Layout1: TLayout;
-    RoundRect1: TRoundRect;
-    imgBotao2: TImage;
-    Layout2: TLayout;
-    lblTituloBtn2: TLabel;
+    lytFornecedores: TLayout;
+    rndBtnForn: TRoundRect;
+    imgBtnForn: TImage;
+    lytRotulos2: TLayout;
+    lblTituloBtnForn: TLabel;
     ShadowEffect2: TShadowEffect;
-    Label2: TLabel;
+    lblDesBtnForn: TLabel;
+    lytProdutos: TLayout;
+    rndBtnProd: TRoundRect;
+    imgBtnProd: TImage;
+    lytRotulos3: TLayout;
+    lblTituloBtnProd: TLabel;
+    ShadowEffect3: TShadowEffect;
+    lblDescBtnProd: TLabel;
+    lytPedidos: TLayout;
+    rndBtnPed: TRoundRect;
+    imgBtnPed: TImage;
+    lytRotulos4: TLayout;
+    lblTituloBtnPed: TLabel;
+    ShadowEffect4: TShadowEffect;
+    lytDesBtnPed: TLabel;
+    lytSync: TLayout;
+    rndBtnSync: TRoundRect;
+    imgBtnSync: TImage;
+    lytRotulos5: TLayout;
+    lblTituloBtnSync: TLabel;
+    ShadowEffect5: TShadowEffect;
+    lblDesBtnSync: TLabel;
+    lytConfig: TLayout;
+    rndBtnConfig: TRoundRect;
+    imgBtnConfig: TImage;
+    lytRotulos6: TLayout;
+    lblTituloBtnConfig: TLabel;
+    ShadowEffect6: TShadowEffect;
+    lblDesBtnConfig: TLabel;
+    Image1: TImage;
+    Image2: TImage;
     procedure FormCreate(Sender: TObject);
-    procedure imgBotao1Click(Sender: TObject);
+    procedure imgBtnCliClick(Sender: TObject);
   private
     { Private declarations }
     FActiveForm : TForm;
@@ -43,6 +73,7 @@ type
     { Public declarations }
     procedure MudarAba(ATabItem: TTabItem; Sender: TObject);
     procedure AbrirForm(AFormClass: TComponentClass);
+    procedure AjustarLayout;
   end;
 
 var
@@ -83,13 +114,19 @@ begin
   //  mlvMenu.MasterButton := TControl(BotaoMenu);
 end;
 
-procedure TfrmPrincipal.FormCreate(Sender: TObject);
+procedure TfrmPrincipal.AjustarLayout;
 begin
-  tbctrlPrincipal.ActiveTab := tbitemMenu;
-  tbctrlPrincipal.TabPosition := TTabPosition.None;
+  lytMenu.ItemWidth := (Self.ClientWidth - 20);
 end;
 
-procedure TfrmPrincipal.imgBotao1Click(Sender: TObject);
+procedure TfrmPrincipal.FormCreate(Sender: TObject);
+begin
+  tbctrlPrincipal.ActiveTab   := tbitemMenu;
+  tbctrlPrincipal.TabPosition := TTabPosition.None;
+  AjustarLayout;
+end;
+
+procedure TfrmPrincipal.imgBtnCliClick(Sender: TObject);
 begin
   AbrirForm(TfrmCadCli);       //Carrego o próximo form
   MudarAba(tbitemApoio, Sender); //Mudar aba do menu para o apoio (novo form)

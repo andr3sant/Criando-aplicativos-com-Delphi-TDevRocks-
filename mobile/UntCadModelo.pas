@@ -22,9 +22,10 @@ type
     procedure spbVoltarClick(Sender: TObject);
   private
     { Private declarations }
-    procedure MudarAba(ATabItem: TTabItem; Sender: TObject);
   public
     { Public declarations }
+  protected
+    procedure MudarAba(ATabItem: TTabItem; Sender: TObject);
   end;
 
 var

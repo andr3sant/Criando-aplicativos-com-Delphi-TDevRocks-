@@ -12,7 +12,7 @@ uses
 
 begin
   Application.Initialize;
-  AApplication.CreateForm(TfrmPrincipal, frmPrincipal);
-  AApplication.CreateForm(TfrmCadModelo, frmCadModelo);
-  plication.Run;
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmCadModelo, frmCadModelo);
+  Application.Run;
 end.

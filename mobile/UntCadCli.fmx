@@ -21,7 +21,6 @@ inherited frmCadCli: TfrmCadCli
           Size.Height = 383.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
-          OnItemClick = lsviewListaItemClick
         end
       end
       inherited tbitemEdicao: TTabItem

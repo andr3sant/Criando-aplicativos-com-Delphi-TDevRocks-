@@ -17,8 +17,6 @@ type
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
     LinkListControlToField1: TLinkListControlToField;
-    procedure lsviewListaItemClick(const Sender: TObject;
-      const AItem: TListViewItem);
   private
     { Private declarations }
   public
@@ -33,12 +31,5 @@ implementation
 {$R *.fmx}
 
 uses UntDM;
-
-procedure TfrmCadCli.lsviewListaItemClick(const Sender: TObject;
-  const AItem: TListViewItem);
-begin
-  inherited;
-  //MudarAba(tbItemEdicao, Sender);
-end;
 
 end.
