@@ -1,19 +1,38 @@
 inherited frmCadCli: TfrmCadCli
   Caption = 'frmCadModelo1'
+  OnCreate = FormCreate
+  OnClose = FormClose
   DesignerMasterStyle = 3
   inherited lytBase: TLayout
     inherited tbctrlPrincipal: TTabControl
+      TabIndex = 1
+      TabPosition = Top
       inherited tbitemListagem: TTabItem
+        IsSelected = False
         ExplicitSize.cx = 160.000000000000000000
         ExplicitSize.cy = 49.000000000000000000
         inherited toolSuperior: TToolBar
           inherited lblTitulo: TLabel
-            Text = 'Cadastro de Clientes'
+            Text = 'Clientes'
+          end
+          object spbInserir: TSpeedButton
+            Align = Right
+            Margins.Top = 4.000000000000000000
+            Margins.Right = 8.000000000000000000
+            Margins.Bottom = 4.000000000000000000
+            Position.X = 248.000000000000000000
+            Position.Y = 4.000000000000000000
+            Size.Width = 64.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'buttonstyle'
+            Text = 'Novo'
+            OnClick = spbInserirClick
           end
         end
         object lsviewLista: TListView
-          ItemAppearanceClassName = 'TListItemAppearance'
-          ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+          ItemAppearanceClassName = 'TMultiDetailItemAppearance'
+          ItemEditAppearanceClassName = 'TMultiDetailDeleteAppearance'
           HeaderAppearanceClassName = 'TListHeaderObjects'
           FooterAppearanceClassName = 'TListHeaderObjects'
           Align = Client
@@ -21,11 +40,250 @@ inherited frmCadCli: TfrmCadCli
           Size.Height = 383.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
+          OnItemClick = lsviewListaItemClick
         end
       end
       inherited tbitemEdicao: TTabItem
+        IsSelected = True
         ExplicitSize.cx = 160.000000000000000000
         ExplicitSize.cy = 49.000000000000000000
+        object tbctrlEdicao: TTabControl
+          Align = Top
+          Position.Y = 48.000000000000000000
+          Size.Width = 320.000000000000000000
+          Size.Height = 217.000000000000000000
+          Size.PlatformDefault = False
+          TabHeight = 49.000000000000000000
+          TabIndex = 0
+          TabOrder = 0
+          TabPosition = Top
+          object tbitemStep1: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = True
+            Size.Width = 160.000000000000000000
+            Size.Height = 49.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'Passo1'
+            object ListBox1: TListBox
+              Align = Client
+              Size.Width = 320.000000000000000000
+              Size.Height = 168.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              DisableFocusEffect = True
+              DefaultItemStyles.ItemStyle = ''
+              DefaultItemStyles.GroupHeaderStyle = ''
+              DefaultItemStyles.GroupFooterStyle = ''
+              Viewport.Width = 320.000000000000000000
+              Viewport.Height = 168.000000000000000000
+              object lsitemID: TListBoxItem
+                StyleLookup = 'listboxitemnodetail'
+                TabOrder = 3
+                Text = 'lsitemID'
+              end
+              object ListBoxItem1: TListBoxItem
+                Position.Y = 44.000000000000000000
+                Size.Width = 320.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object edtApelido: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Client
+                  TabOrder = 0
+                  Margins.Left = 4.000000000000000000
+                  Margins.Top = 4.000000000000000000
+                  Margins.Right = 4.000000000000000000
+                  Margins.Bottom = 4.000000000000000000
+                  Size.Width = 312.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Digite o apelido do cliente'
+                end
+              end
+              object ListBoxItem2: TListBoxItem
+                Position.Y = 84.000000000000000000
+                Size.Width = 320.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                object edtRazaoSocial: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Client
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Margins.Left = 4.000000000000000000
+                  Margins.Top = 4.000000000000000000
+                  Margins.Right = 4.000000000000000000
+                  Margins.Bottom = 4.000000000000000000
+                  Size.Width = 312.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Digite a raz'#227'o social'
+                end
+              end
+              object ListBoxItem3: TListBoxItem
+                Position.Y = 124.000000000000000000
+                TabOrder = 2
+                object spbProx1: TSpeedButton
+                  Align = Right
+                  Margins.Left = 4.000000000000000000
+                  Margins.Top = 4.000000000000000000
+                  Margins.Right = 4.000000000000000000
+                  Margins.Bottom = 4.000000000000000000
+                  Position.X = 268.000000000000000000
+                  Position.Y = 4.000000000000000000
+                  Size.Width = 48.000000000000000000
+                  Size.Height = 48.000000000000000000
+                  Size.PlatformDefault = False
+                  StyleLookup = 'nexttoolbutton'
+                  Text = 'Pr'#243'ximo >'
+                  OnClick = spbProx1Click
+                end
+              end
+            end
+          end
+          object tbitemStep2: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = False
+            Size.Width = 160.000000000000000000
+            Size.Height = 49.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = 'Passo2'
+            object ListBox2: TListBox
+              Align = Client
+              Size.Width = 320.000000000000000000
+              Size.Height = 168.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              DisableFocusEffect = True
+              DefaultItemStyles.ItemStyle = ''
+              DefaultItemStyles.GroupHeaderStyle = ''
+              DefaultItemStyles.GroupFooterStyle = ''
+              Viewport.Width = 320.000000000000000000
+              Viewport.Height = 168.000000000000000000
+              object ListBoxItem4: TListBoxItem
+                Size.Width = 320.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object edtCNPJ: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Client
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Margins.Left = 4.000000000000000000
+                  Margins.Top = 4.000000000000000000
+                  Margins.Right = 4.000000000000000000
+                  Margins.Bottom = 4.000000000000000000
+                  Size.Width = 312.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Digite o CNPJ'
+                end
+              end
+              object ListBoxItem5: TListBoxItem
+                Position.Y = 40.000000000000000000
+                Size.Width = 320.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                object edtTelefone: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Client
+                  StyleLookup = 'transparentedit'
+                  TabOrder = 0
+                  Margins.Left = 4.000000000000000000
+                  Margins.Top = 4.000000000000000000
+                  Margins.Right = 4.000000000000000000
+                  Margins.Bottom = 4.000000000000000000
+                  Size.Width = 312.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Digite o telefone (99) 9999-9999'
+                end
+              end
+              object ListBoxItem6: TListBoxItem
+                Position.Y = 80.000000000000000000
+                TabOrder = 2
+                object spbGravar: TSpeedButton
+                  Align = Right
+                  Margins.Left = 4.000000000000000000
+                  Margins.Top = 4.000000000000000000
+                  Margins.Right = 4.000000000000000000
+                  Margins.Bottom = 4.000000000000000000
+                  Position.X = 232.000000000000000000
+                  Position.Y = 4.000000000000000000
+                  Size.Width = 84.000000000000000000
+                  Size.Height = 36.000000000000000000
+                  Size.PlatformDefault = False
+                  StyleLookup = 'buttonstyle'
+                  Text = 'Gravar'
+                  OnClick = spbGravarClick
+                end
+                object spbPasso1: TSpeedButton
+                  Align = Left
+                  Margins.Left = 4.000000000000000000
+                  Margins.Top = 4.000000000000000000
+                  Margins.Right = 4.000000000000000000
+                  Margins.Bottom = 4.000000000000000000
+                  Position.X = 4.000000000000000000
+                  Position.Y = 4.000000000000000000
+                  Size.Width = 48.000000000000000000
+                  Size.Height = 48.000000000000000000
+                  Size.PlatformDefault = False
+                  StyleLookup = 'priortoolbutton'
+                  Text = 'Pr'#243'ximo >'
+                  OnClick = spbPasso1Click
+                end
+              end
+            end
+          end
+        end
+        object toolSupEdicao: TToolBar
+          Size.Width = 320.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object Label1: TLabel
+            Align = Contents
+            Size.Width = 320.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'listboxheaderlabel'
+            TextSettings.HorzAlign = Center
+            Text = 'Detalhes'
+          end
+          object spbVoltarLista: TSpeedButton
+            Align = Left
+            Margins.Left = 8.000000000000000000
+            Position.X = 8.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'backtoolbutton'
+            OnClick = spbVoltarListaClick
+          end
+          object spbEditar: TSpeedButton
+            Align = Right
+            Margins.Top = 8.000000000000000000
+            Position.X = 272.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'composetoolbutton'
+            Text = 'spbEditar'
+          end
+        end
       end
     end
   end
@@ -45,9 +303,34 @@ inherited frmCadCli: TfrmCadCli
       DataSource = BindSourceDB1
       FieldName = 'APELIDO'
       Control = lsviewLista
-      FillExpressions = <>
+      FillExpressions = <
+        item
+          SourceMemberName = 'RAZAOSOCIAL'
+          ControlMemberName = 'Detail1'
+        end>
       FillHeaderExpressions = <>
       FillBreakGroups = <>
+    end
+    object LinkPropertyToFieldItemDataText: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'ID'
+      Component = lsitemID
+      ComponentProperty = 'ItemData.Text'
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'APELIDO'
+      Control = edtApelido
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'RAZAOSOCIAL'
+      Control = edtRazaoSocial
+      Track = False
     end
   end
 end

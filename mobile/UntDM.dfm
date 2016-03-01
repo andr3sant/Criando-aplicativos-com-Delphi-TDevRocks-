@@ -1,15 +1,15 @@
 object DM: TDM
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
   Height = 460
   Width = 636
-  object fdConexao: TFDConnection
+  object fdcConexao: TFDConnection
     Params.Strings = (
       
         'Database=C:\TDevRocks\Curso - Criando aplicativos moveis com Del' +
         'phi\mobile\database\TDevRocks.s3db'
       'OpenMode=ReadWrite'
       'DriverID=SQLite')
-    Connected = True
     LoginPrompt = False
     Left = 64
     Top = 24
@@ -19,9 +19,9 @@ object DM: TDM
     Top = 24
   end
   object qryClientes: TFDQuery
-    Connection = fdConexao
+    Connection = fdcConexao
     SQL.Strings = (
-      'SELECT * FROM CLIENTES WHERE 1 = 2')
+      'SELECT * FROM CLIENTES')
     Left = 64
     Top = 96
     object qryClientesID: TStringField

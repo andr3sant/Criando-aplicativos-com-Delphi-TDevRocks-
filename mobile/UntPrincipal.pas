@@ -3,10 +3,27 @@ unit UntPrincipal;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
-  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.TabControl,
-  FMX.Layouts, System.Actions, FMX.ActnList, FMX.Controls.Presentation,
-  FMX.StdCtrls, FMX.Effects, FMX.Objects;
+  System.SysUtils,
+  System.Types,
+  System.UITypes,
+  System.Classes,
+  System.Variants,
+  FMX.Types,
+  FMX.Controls,
+  FMX.Forms,
+  FMX.Graphics,
+  FMX.Dialogs,
+  FMX.TabControl,
+  FMX.Layouts,
+  System.Actions,
+  FMX.ActnList,
+  FMX.Controls.Presentation,
+  FMX.StdCtrls,
+  FMX.Effects,
+  FMX.Objects,
+
+  {Units Declaradas durante o curso}
+  Lib;
 
 type
   TfrmPrincipal = class(TForm)
@@ -66,11 +83,13 @@ type
     Image2: TImage;
     procedure FormCreate(Sender: TObject);
     procedure imgBtnCliClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
     FActiveForm : TForm;
   public
     { Public declarations }
+    FLib : TLib;
     procedure MudarAba(ATabItem: TTabItem; Sender: TObject);
     procedure AbrirForm(AFormClass: TComponentClass);
     procedure AjustarLayout;
@@ -83,7 +102,8 @@ implementation
 
 {$R *.fmx}
 
-uses UntCadCli;
+uses
+  UntCadCli;
 
 procedure TfrmPrincipal.AbrirForm(AFormClass: TComponentClass);
 var
@@ -119,8 +139,14 @@ begin
   lytMenu.ItemWidth := (Self.ClientWidth - 20);
 end;
 
+procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  FLib.DisposeOf;
+end;
+
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
+  FLib := TLib.Create;
   tbctrlPrincipal.ActiveTab   := tbitemMenu;
   tbctrlPrincipal.TabPosition := TTabPosition.None;
   AjustarLayout;
@@ -128,7 +154,7 @@ end;
 
 procedure TfrmPrincipal.imgBtnCliClick(Sender: TObject);
 begin
-  AbrirForm(TfrmCadCli);       //Carrego o próximo form
+  AbrirForm(TfrmCadCli);         //Carrego o próximo form
   MudarAba(tbitemApoio, Sender); //Mudar aba do menu para o apoio (novo form)
 end;
 
