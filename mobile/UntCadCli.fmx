@@ -5,10 +5,8 @@ inherited frmCadCli: TfrmCadCli
   DesignerMasterStyle = 3
   inherited lytBase: TLayout
     inherited tbctrlPrincipal: TTabControl
-      TabIndex = 1
       TabPosition = Top
       inherited tbitemListagem: TTabItem
-        IsSelected = False
         ExplicitSize.cx = 160.000000000000000000
         ExplicitSize.cy = 49.000000000000000000
         inherited toolSuperior: TToolBar
@@ -41,10 +39,10 @@ inherited frmCadCli: TfrmCadCli
           Size.PlatformDefault = False
           TabOrder = 1
           OnItemClick = lsviewListaItemClick
+          ShowSelection = False
         end
       end
       inherited tbitemEdicao: TTabItem
-        IsSelected = True
         ExplicitSize.cx = 160.000000000000000000
         ExplicitSize.cy = 49.000000000000000000
         object tbctrlEdicao: TTabControl
@@ -54,20 +52,22 @@ inherited frmCadCli: TfrmCadCli
           Size.Height = 217.000000000000000000
           Size.PlatformDefault = False
           TabHeight = 49.000000000000000000
-          TabIndex = 0
+          TabIndex = 1
           TabOrder = 0
           TabPosition = Top
           object tbitemStep1: TTabItem
             CustomIcon = <
               item
               end>
-            IsSelected = True
+            IsSelected = False
             Size.Width = 160.000000000000000000
             Size.Height = 49.000000000000000000
             Size.PlatformDefault = False
             StyleLookup = ''
             TabOrder = 0
             Text = 'Passo1'
+            ExplicitSize.cx = 160.000000000000000000
+            ExplicitSize.cy = 49.000000000000000000
             object ListBox1: TListBox
               Align = Client
               Size.Width = 320.000000000000000000
@@ -86,6 +86,7 @@ inherited frmCadCli: TfrmCadCli
                 Text = 'lsitemID'
               end
               object ListBoxItem1: TListBoxItem
+                Selectable = False
                 Position.Y = 44.000000000000000000
                 Size.Width = 320.000000000000000000
                 Size.Height = 40.000000000000000000
@@ -106,6 +107,7 @@ inherited frmCadCli: TfrmCadCli
                 end
               end
               object ListBoxItem2: TListBoxItem
+                Selectable = False
                 Position.Y = 84.000000000000000000
                 Size.Width = 320.000000000000000000
                 Size.Height = 40.000000000000000000
@@ -151,13 +153,15 @@ inherited frmCadCli: TfrmCadCli
             CustomIcon = <
               item
               end>
-            IsSelected = False
+            IsSelected = True
             Size.Width = 160.000000000000000000
             Size.Height = 49.000000000000000000
             Size.PlatformDefault = False
             StyleLookup = ''
             TabOrder = 0
             Text = 'Passo2'
+            ExplicitSize.cx = 160.000000000000000000
+            ExplicitSize.cy = 49.000000000000000000
             object ListBox2: TListBox
               Align = Client
               Size.Width = 320.000000000000000000
@@ -171,6 +175,7 @@ inherited frmCadCli: TfrmCadCli
               Viewport.Width = 320.000000000000000000
               Viewport.Height = 168.000000000000000000
               object ListBoxItem4: TListBoxItem
+                Selectable = False
                 Size.Width = 320.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
@@ -191,6 +196,7 @@ inherited frmCadCli: TfrmCadCli
                 end
               end
               object ListBoxItem5: TListBoxItem
+                Selectable = False
                 Position.Y = 40.000000000000000000
                 Size.Width = 320.000000000000000000
                 Size.Height = 40.000000000000000000
@@ -212,6 +218,7 @@ inherited frmCadCli: TfrmCadCli
                 end
               end
               object ListBoxItem6: TListBoxItem
+                Selectable = False
                 Position.Y = 80.000000000000000000
                 TabOrder = 2
                 object spbGravar: TSpeedButton
@@ -260,7 +267,7 @@ inherited frmCadCli: TfrmCadCli
             Size.PlatformDefault = False
             StyleLookup = 'listboxheaderlabel'
             TextSettings.HorzAlign = Center
-            Text = 'Detalhes'
+            Text = 'Visualizando'
           end
           object spbVoltarLista: TSpeedButton
             Align = Left
@@ -282,6 +289,7 @@ inherited frmCadCli: TfrmCadCli
             Size.PlatformDefault = False
             StyleLookup = 'composetoolbutton'
             Text = 'spbEditar'
+            OnClick = spbEditarClick
           end
         end
       end

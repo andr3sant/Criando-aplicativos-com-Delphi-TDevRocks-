@@ -1,144 +1,144 @@
 ﻿[lytBase]
-Coordinates=590,660,50,33
+Coordinates=590,660,57,36
 Visible=False
 
 [lblTitulo]
-Coordinates=110,660,54,33
+Coordinates=110,660,60,36
 Visible=False
 
 [spbVoltar]
-Coordinates=31,660,61,33
+Coordinates=31,660,69,36
 Visible=False
 
 [toolSuperior]
-Coordinates=493,660,75,33
+Coordinates=493,660,84,36
 Visible=False
 
 [tbctrlPrincipal]
-Coordinates=390,660,83,33
+Coordinates=390,660,93,36
 Visible=False
 
 [tbitemEdicao]
-Coordinates=291,660,79,33
+Coordinates=291,660,89,36
 Visible=False
 
 [tbitemListagem]
-Coordinates=179,660,90,33
+Coordinates=179,660,102,36
 Visible=False
 
 [ActionList1]
-Coordinates=312,111,70,33
+Coordinates=312,111,78,36
 
 [actMudarAba]
-Coordinates=312,166,79,33
+Coordinates=312,166,91,36
 
 [lsviewLista]
-Coordinates=10,10,89,231
+Coordinates=10,10,107,278
 Visible=True
 
 [DM.qryClientes]
-Coordinates=190,10,89,33
+Coordinates=190,10,103,36
 Visible=False
 
 []
 Coordinates=312,221,91,36
 
 [BindSourceDB1]
-Coordinates=190,10,92,159
+Coordinates=190,10,106,174
 
 [BindingsList1]
-Coordinates=136,175,82,33
+Coordinates=136,175,91,36
 
 [ListBoxItem5]
-Coordinates=900,340,79,33
+Coordinates=900,340,89,36
 Visible=False
 
 [ListBox2]
-Coordinates=637,336,57,33
+Coordinates=637,336,64,36
 Visible=False
 
 [tbitemStep2]
-Coordinates=780,154,73,33
+Coordinates=780,154,83,36
 Visible=False
 
 [spbProx1]
-Coordinates=520,560,61,33
+Coordinates=520,560,69,36
 Visible=False
 
 [lsitemID]
-Coordinates=170,230,71,51
+Coordinates=210,300,84,58
 Visible=True
 ExplicitSubNodes=ItemData.Text
 
 [ListBoxItem1]
-Coordinates=780,206,79,33
+Coordinates=780,206,89,36
 Visible=False
 
 [ListBoxItem4]
-Coordinates=780,258,79,33
+Coordinates=780,258,89,36
 Visible=False
 
 [tbctrlEdicao]
-Coordinates=780,310,73,33
+Coordinates=780,310,82,36
 Visible=False
 
 [spbPasso1]
-Coordinates=860,150,68,33
+Coordinates=860,150,78,36
 Visible=False
 
 [tbitemStep1]
-Coordinates=780,362,73,33
+Coordinates=780,362,83,36
 Visible=False
 
 [ListBoxItem2]
-Coordinates=780,414,79,33
+Coordinates=780,414,89,36
 Visible=False
 
 [Label1]
-Coordinates=589,336,46,33
+Coordinates=589,336,53,36
 Visible=False
 
 [spbVoltarLista]
-Coordinates=900,270,85,33
+Coordinates=900,270,96,36
 Visible=False
 
 [ListBox1]
-Coordinates=880,400,57,33
+Coordinates=880,400,64,36
 Visible=False
 
 [toolSupEdicao]
-Coordinates=780,466,86,33
+Coordinates=780,466,98,36
 Visible=False
 
 [edtCNPJ]
-Coordinates=10,390,57,51
+Coordinates=10,420,66,58
 
 [ListBoxItem3]
-Coordinates=780,518,79,33
+Coordinates=780,518,89,36
 Visible=False
 
 [edtApelido]
-Coordinates=10,270,67,51
+Coordinates=10,300,76,58
 
 [spbEditar]
-Coordinates=589,532,61,33
+Coordinates=589,532,69,36
 Visible=False
 
 [edtTelefone]
-Coordinates=10,450,72,51
+Coordinates=10,480,83,58
 
 [spbInserir]
-Coordinates=886,593,64,33
+Coordinates=886,593,71,36
 Visible=False
 
 [ListBoxItem6]
-Coordinates=780,570,79,33
+Coordinates=780,570,89,36
 Visible=False
 
 [spbGravar]
-Coordinates=860,650,65,33
+Coordinates=860,650,74,36
 Visible=False
 
 [edtRazaoSocial]
-Coordinates=10,330,40,51
+Coordinates=10,360,105,58
 

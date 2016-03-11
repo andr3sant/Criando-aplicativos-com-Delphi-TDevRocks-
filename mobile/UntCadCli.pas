@@ -57,6 +57,7 @@ type
     procedure spbProx1Click(Sender: TObject);
     procedure spbPasso1Click(Sender: TObject);
     procedure spbGravarClick(Sender: TObject);
+    procedure spbEditarClick(Sender: TObject);
   private
     procedure AtivarDesativarBotoes;
     { Private declarations }
@@ -87,6 +88,7 @@ begin
   tbctrlEdicao.ActiveTab      := tbitemStep1;
   tbctrlPrincipal.TabPosition := TTabPosition.None;
   tbctrlEdicao.TabPosition    := TTabPosition.None;
+  AtivarDesativarBotoes;
 end;
 
 procedure TfrmCadCli.lsviewListaItemClick(const Sender: TObject;
@@ -97,10 +99,21 @@ begin
   MudarAba(tbitemEdicao, Sender);
 end;
 
+procedure TfrmCadCli.spbEditarClick(Sender: TObject);
+begin
+  inherited;
+  DM.qryClientes.Edit;
+  MudarAba(tbitemStep1, Sender);
+  edtApelido.SetFocus;
+  AtivarDesativarBotoes;
+end;
+
 procedure TfrmCadCli.spbGravarClick(Sender: TObject);
 begin
   inherited;
-  //
+  DM.qryClientes.Post;
+  AtivarDesativarBotoes;
+  MudarAba(tbitemListagem, Sender);
 end;
 
 procedure TfrmCadCli.spbInserirClick(Sender: TObject);
@@ -108,8 +121,10 @@ begin
   inherited;
   DM.qryClientes.Append;
   DM.qryClientesID.AsString := frmPrincipal.FLib.GetObjectID;
+  MudarAba(tbitemStep1, Sender);
   MudarAba(tbitemEdicao, Sender);
-  //AtivarDesativarBotoes;
+  edtApelido.SetFocus;
+  AtivarDesativarBotoes;
 end;
 
 procedure TfrmCadCli.spbPasso1Click(Sender: TObject);
@@ -137,20 +152,26 @@ end;
 
 procedure TfrmCadCli.AtivarDesativarBotoes;
 begin
-  spbGravar.Enabled      := (DM.qryClientes.State in dsEditModes);
+  spbGravar.Enabled      :=     (DM.qryClientes.State in dsEditModes);
   spbEditar.Visible      := not (DM.qryClientes.State in dsEditModes);
-  edtApelido.Enabled     := (DM.qryClientes.State in dsEditModes);
-  edtRazaoSocial.Enabled := (DM.qryClientes.State in dsEditModes);
+  edtApelido.Enabled     :=     (DM.qryClientes.State in dsEditModes);
+  edtRazaoSocial.Enabled :=     (DM.qryClientes.State in dsEditModes);
 
   if (DM.qryClientes.State in dsEditModes) then
   begin
     edtApelido.StyleLookup     := '';
     edtRazaoSocial.StyleLookup := '';
+    //Modifica o Caption do título
+    case DM.qryClientes.State of
+      dsInsert : lblTitulo.Text := 'Novo Registro';
+      dsEdit   : lblTitulo.Text := 'Editando';
+    end;
   end
   else
   begin
     edtApelido.StyleLookup     := 'transparentedit';
     edtRazaoSocial.StyleLookup := 'transparentedit';
+    lblTitulo.Text             := 'Visualizando';
   end;
 end;
 
