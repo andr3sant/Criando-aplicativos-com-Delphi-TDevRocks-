@@ -38,5 +38,24 @@ object DM: TDM
       Origin = 'RAZAOSOCIAL'
       Size = 200
     end
+    object qryClientesCNPJCPF: TStringField
+      FieldName = 'CNPJCPF'
+      Origin = 'CNPJCPF'
+      Size = 50
+    end
+    object qryClientesCELULAR: TStringField
+      FieldName = 'CELULAR'
+      Origin = 'CELULAR'
+      Size = 30
+    end
+    object qryClientesFIXO: TStringField
+      FieldName = 'FIXO'
+      Origin = 'FIXO'
+      Size = 30
+    end
+    object qryClientesFOTO: TBlobField
+      FieldName = 'FOTO'
+      Origin = 'FOTO'
+    end
   end
 end

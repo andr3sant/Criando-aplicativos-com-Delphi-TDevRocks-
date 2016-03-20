@@ -7,7 +7,6 @@ uses
 
 const
   C_TAM_BUTTON = 70;
-
 type
   TLib = class
     private

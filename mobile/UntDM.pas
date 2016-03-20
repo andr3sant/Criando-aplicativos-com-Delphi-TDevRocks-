@@ -20,6 +20,10 @@ type
     qryClientesID: TStringField;
     qryClientesAPELIDO: TStringField;
     qryClientesRAZAOSOCIAL: TStringField;
+    qryClientesCNPJCPF: TStringField;
+    qryClientesCELULAR: TStringField;
+    qryClientesFIXO: TStringField;
+    qryClientesFOTO: TBlobField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

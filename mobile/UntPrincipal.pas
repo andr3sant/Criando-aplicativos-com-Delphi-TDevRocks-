@@ -23,6 +23,7 @@ uses
   FMX.Objects,
 
   {Units Declaradas durante o curso}
+  System.IOUtils,
   Lib;
 
 type

@@ -5,25 +5,28 @@ inherited frmCadCli: TfrmCadCli
   DesignerMasterStyle = 3
   inherited lytBase: TLayout
     inherited tbctrlPrincipal: TTabControl
+      TabIndex = 1
       TabPosition = Top
       inherited tbitemListagem: TTabItem
+        IsSelected = False
         ExplicitSize.cx = 160.000000000000000000
         ExplicitSize.cy = 49.000000000000000000
         inherited toolSuperior: TToolBar
           inherited lblTitulo: TLabel
+            StyleLookup = 'listboxheaderlabel'
             Text = 'Clientes'
+          end
+          inherited spbMenu: TSpeedButton
+            Text = 'Menu'
           end
           object spbInserir: TSpeedButton
             Align = Right
-            Margins.Top = 4.000000000000000000
             Margins.Right = 8.000000000000000000
-            Margins.Bottom = 4.000000000000000000
-            Position.X = 248.000000000000000000
-            Position.Y = 4.000000000000000000
-            Size.Width = 64.000000000000000000
-            Size.Height = 40.000000000000000000
+            Position.X = 264.000000000000000000
+            Size.Width = 48.000000000000000000
+            Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
-            StyleLookup = 'buttonstyle'
+            StyleLookup = 'additembutton'
             Text = 'Novo'
             OnClick = spbInserirClick
           end
@@ -38,18 +41,20 @@ inherited frmCadCli: TfrmCadCli
           Size.Height = 383.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
+          ItemAppearanceObjects.ItemObjects.Image.Visible = True
           OnItemClick = lsviewListaItemClick
           ShowSelection = False
         end
       end
       inherited tbitemEdicao: TTabItem
+        IsSelected = True
         ExplicitSize.cx = 160.000000000000000000
         ExplicitSize.cy = 49.000000000000000000
         object tbctrlEdicao: TTabControl
           Align = Top
           Position.Y = 48.000000000000000000
           Size.Width = 320.000000000000000000
-          Size.Height = 217.000000000000000000
+          Size.Height = 215.000000000000000000
           Size.PlatformDefault = False
           TabHeight = 49.000000000000000000
           TabIndex = 1
@@ -69,25 +74,21 @@ inherited frmCadCli: TfrmCadCli
             ExplicitSize.cx = 160.000000000000000000
             ExplicitSize.cy = 49.000000000000000000
             object ListBox1: TListBox
-              Align = Client
+              Align = Top
               Size.Width = 320.000000000000000000
-              Size.Height = 168.000000000000000000
+              Size.Height = 120.000000000000000000
               Size.PlatformDefault = False
+              StyleLookup = 'transparentlistboxstyle'
               TabOrder = 0
               DisableFocusEffect = True
               DefaultItemStyles.ItemStyle = ''
               DefaultItemStyles.GroupHeaderStyle = ''
               DefaultItemStyles.GroupFooterStyle = ''
+              GroupingKind = Grouped
               Viewport.Width = 320.000000000000000000
-              Viewport.Height = 168.000000000000000000
-              object lsitemID: TListBoxItem
-                StyleLookup = 'listboxitemnodetail'
-                TabOrder = 3
-                Text = 'lsitemID'
-              end
+              Viewport.Height = 120.000000000000000000
               object ListBoxItem1: TListBoxItem
                 Selectable = False
-                Position.Y = 44.000000000000000000
                 Size.Width = 320.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
@@ -108,7 +109,7 @@ inherited frmCadCli: TfrmCadCli
               end
               object ListBoxItem2: TListBoxItem
                 Selectable = False
-                Position.Y = 84.000000000000000000
+                Position.Y = 40.000000000000000000
                 Size.Width = 320.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
@@ -116,7 +117,6 @@ inherited frmCadCli: TfrmCadCli
                 object edtRazaoSocial: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Client
-                  StyleLookup = 'transparentedit'
                   TabOrder = 0
                   Margins.Left = 4.000000000000000000
                   Margins.Top = 4.000000000000000000
@@ -128,24 +128,23 @@ inherited frmCadCli: TfrmCadCli
                   TextPrompt = 'Digite a raz'#227'o social'
                 end
               end
-              object ListBoxItem3: TListBoxItem
-                Position.Y = 124.000000000000000000
-                TabOrder = 2
-                object spbProx1: TSpeedButton
-                  Align = Right
-                  Margins.Left = 4.000000000000000000
-                  Margins.Top = 4.000000000000000000
-                  Margins.Right = 4.000000000000000000
-                  Margins.Bottom = 4.000000000000000000
-                  Position.X = 268.000000000000000000
-                  Position.Y = 4.000000000000000000
-                  Size.Width = 48.000000000000000000
-                  Size.Height = 48.000000000000000000
-                  Size.PlatformDefault = False
-                  StyleLookup = 'nexttoolbutton'
-                  Text = 'Pr'#243'ximo >'
-                  OnClick = spbProx1Click
-                end
+            end
+            object toolStep1: TToolBar
+              Position.Y = 120.000000000000000000
+              Size.Width = 320.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object spbPasso2: TSpeedButton
+                Align = Right
+                Margins.Right = 8.000000000000000000
+                Position.X = 264.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'nexttoolbutton'
+                Text = 'Pr'#243'ximo >'
+                OnClick = spbPasso2Click
               end
             end
           end
@@ -163,17 +162,19 @@ inherited frmCadCli: TfrmCadCli
             ExplicitSize.cx = 160.000000000000000000
             ExplicitSize.cy = 49.000000000000000000
             object ListBox2: TListBox
-              Align = Client
+              Align = Top
               Size.Width = 320.000000000000000000
-              Size.Height = 168.000000000000000000
+              Size.Height = 120.000000000000000000
               Size.PlatformDefault = False
+              StyleLookup = 'transparentlistboxstyle'
               TabOrder = 0
               DisableFocusEffect = True
               DefaultItemStyles.ItemStyle = ''
               DefaultItemStyles.GroupHeaderStyle = ''
               DefaultItemStyles.GroupFooterStyle = ''
+              GroupingKind = Grouped
               Viewport.Width = 320.000000000000000000
-              Viewport.Height = 168.000000000000000000
+              Viewport.Height = 120.000000000000000000
               object ListBoxItem4: TListBoxItem
                 Selectable = False
                 Size.Width = 320.000000000000000000
@@ -183,7 +184,6 @@ inherited frmCadCli: TfrmCadCli
                 object edtCNPJ: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Client
-                  StyleLookup = 'transparentedit'
                   TabOrder = 0
                   Margins.Left = 4.000000000000000000
                   Margins.Top = 4.000000000000000000
@@ -202,10 +202,29 @@ inherited frmCadCli: TfrmCadCli
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
+                object edtCelular: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Client
+                  TabOrder = 0
+                  Margins.Left = 4.000000000000000000
+                  Margins.Top = 4.000000000000000000
+                  Margins.Right = 4.000000000000000000
+                  Margins.Bottom = 4.000000000000000000
+                  Size.Width = 312.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Digite o celular (99) 9999-9999'
+                end
+              end
+              object ListBoxItem7: TListBoxItem
+                Position.Y = 80.000000000000000000
+                Size.Width = 320.000000000000000000
+                Size.Height = 40.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 2
                 object edtTelefone: TEdit
                   Touch.InteractiveGestures = [LongTap, DoubleTap]
                   Align = Client
-                  StyleLookup = 'transparentedit'
                   TabOrder = 0
                   Margins.Left = 4.000000000000000000
                   Margins.Top = 4.000000000000000000
@@ -217,40 +236,37 @@ inherited frmCadCli: TfrmCadCli
                   TextPrompt = 'Digite o telefone (99) 9999-9999'
                 end
               end
-              object ListBoxItem6: TListBoxItem
-                Selectable = False
-                Position.Y = 80.000000000000000000
-                TabOrder = 2
-                object spbGravar: TSpeedButton
-                  Align = Right
-                  Margins.Left = 4.000000000000000000
-                  Margins.Top = 4.000000000000000000
-                  Margins.Right = 4.000000000000000000
-                  Margins.Bottom = 4.000000000000000000
-                  Position.X = 232.000000000000000000
-                  Position.Y = 4.000000000000000000
-                  Size.Width = 84.000000000000000000
-                  Size.Height = 36.000000000000000000
-                  Size.PlatformDefault = False
-                  StyleLookup = 'buttonstyle'
-                  Text = 'Gravar'
-                  OnClick = spbGravarClick
-                end
-                object spbPasso1: TSpeedButton
-                  Align = Left
-                  Margins.Left = 4.000000000000000000
-                  Margins.Top = 4.000000000000000000
-                  Margins.Right = 4.000000000000000000
-                  Margins.Bottom = 4.000000000000000000
-                  Position.X = 4.000000000000000000
-                  Position.Y = 4.000000000000000000
-                  Size.Width = 48.000000000000000000
-                  Size.Height = 48.000000000000000000
-                  Size.PlatformDefault = False
-                  StyleLookup = 'priortoolbutton'
-                  Text = 'Pr'#243'ximo >'
-                  OnClick = spbPasso1Click
-                end
+            end
+            object toolStep2: TToolBar
+              Position.Y = 120.000000000000000000
+              Size.Width = 320.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object spbGravar: TSpeedButton
+                Align = Right
+                Margins.Left = 4.000000000000000000
+                Margins.Top = 4.000000000000000000
+                Margins.Right = 4.000000000000000000
+                Margins.Bottom = 4.000000000000000000
+                Position.X = 268.000000000000000000
+                Position.Y = 4.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'donetoolbutton'
+                Text = 'Gravar'
+                OnClick = spbGravarClick
+              end
+              object spbPasso1: TSpeedButton
+                Align = Left
+                Margins.Right = 8.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'arrowlefttoolbutton'
+                Text = 'Pr'#243'ximo >'
+                OnClick = spbPasso1Click
               end
             end
           end
@@ -260,7 +276,7 @@ inherited frmCadCli: TfrmCadCli
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
-          object Label1: TLabel
+          object lblTituloEdicao: TLabel
             Align = Contents
             Size.Width = 320.000000000000000000
             Size.Height = 48.000000000000000000
@@ -277,13 +293,13 @@ inherited frmCadCli: TfrmCadCli
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             StyleLookup = 'backtoolbutton'
+            Text = 'Voltar'
             OnClick = spbVoltarListaClick
           end
           object spbEditar: TSpeedButton
             Align = Right
-            Margins.Top = 8.000000000000000000
-            Position.X = 272.000000000000000000
-            Position.Y = 8.000000000000000000
+            Margins.Right = 8.000000000000000000
+            Position.X = 264.000000000000000000
             Size.Width = 48.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
@@ -292,20 +308,66 @@ inherited frmCadCli: TfrmCadCli
             OnClick = spbEditarClick
           end
         end
+        object imgFotoCli: TImage
+          MultiResBitmap = <
+            item
+            end>
+          Align = Client
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Size.Width = 300.000000000000000000
+          Size.Height = 148.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = imgFotoCliClick
+        end
       end
+    end
+  end
+  object fgActionSheet1: TfgActionSheet [1]
+    Actions = <
+      item
+        Action = actFotoBiblioteca
+        Caption = 'Biblioteca'
+      end
+      item
+        Action = actFotoCamera
+        Caption = 'C'#226'mera'
+      end
+      item
+        Caption = 'Cancelar'
+        Style = Cancel
+      end>
+    Title = 'Selecionar foto da:'
+    Left = 176
+    Top = 401
+  end
+  inherited ActionList1: TActionList
+    Left = 104
+    Top = 401
+    object actFotoBiblioteca: TTakePhotoFromLibraryAction
+      Category = 'Media Library'
+      CustomText = 'Biblioteca'
+      OnDidFinishTaking = actFotoBibliotecaDidFinishTaking
+    end
+    object actFotoCamera: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      CustomText = 'C'#226'mera'
+      OnDidFinishTaking = actFotoCameraDidFinishTaking
     end
   end
   object BindSourceDB1: TBindSourceDB
     DataSet = DM.qryClientes
     ScopeMappings = <>
-    Left = 16
-    Top = 384
+    Left = 32
+    Top = 408
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 16
-    Top = 333
+    Left = 24
+    Top = 401
     object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
@@ -315,16 +377,13 @@ inherited frmCadCli: TfrmCadCli
         item
           SourceMemberName = 'RAZAOSOCIAL'
           ControlMemberName = 'Detail1'
+        end
+        item
+          SourceMemberName = 'FOTO'
+          ControlMemberName = 'Bitmap'
         end>
       FillHeaderExpressions = <>
       FillBreakGroups = <>
-    end
-    object LinkPropertyToFieldItemDataText: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'ID'
-      Component = lsitemID
-      ComponentProperty = 'ItemData.Text'
     end
     object LinkControlToField1: TLinkControlToField
       Category = 'Quick Bindings'
@@ -338,6 +397,34 @@ inherited frmCadCli: TfrmCadCli
       DataSource = BindSourceDB1
       FieldName = 'RAZAOSOCIAL'
       Control = edtRazaoSocial
+      Track = False
+    end
+    object LinkPropertyToFieldBitmap: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'FOTO'
+      Component = imgFotoCli
+      ComponentProperty = 'Bitmap'
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'CNPJCPF'
+      Control = edtCNPJ
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'CELULAR'
+      Control = edtCelular
+      Track = False
+    end
+    object LinkControlToField5: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'FIXO'
+      Control = edtTelefone
       Track = False
     end
   end

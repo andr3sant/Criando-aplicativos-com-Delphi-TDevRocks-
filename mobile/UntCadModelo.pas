@@ -15,11 +15,12 @@ type
     tbitemListagem: TTabItem;
     tbitemEdicao: TTabItem;
     toolSuperior: TToolBar;
-    spbVoltar: TSpeedButton;
+    spbMenu: TSpeedButton;
     lblTitulo: TLabel;
     ActionList1: TActionList;
     actMudarAba: TChangeTabAction;
-    procedure spbVoltarClick(Sender: TObject);
+    procedure spbMenuClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,13 +39,18 @@ implementation
 uses
   UntPrincipal;
 
+procedure TfrmCadModelo.FormCreate(Sender: TObject);
+begin
+  spbMenu.Width := 70;
+end;
+
 procedure TfrmCadModelo.MudarAba(ATabItem: TTabItem; Sender: TObject);
 begin
   actMudarAba.Tab := ATabItem;
   actMudarAba.ExecuteTarget(Sender);
 end;
 
-procedure TfrmCadModelo.spbVoltarClick(Sender: TObject);
+procedure TfrmCadModelo.spbMenuClick(Sender: TObject);
 begin
   frmPrincipal.MudarAba(frmPrincipal.tbitemMenu, Sender);
 end;

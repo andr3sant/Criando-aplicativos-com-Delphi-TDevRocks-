@@ -7,6 +7,7 @@ object frmCadModelo: TfrmCadModelo
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
   DesignerMasterStyle = 3
   object lytBase: TLayout
     Align = Client
@@ -49,7 +50,7 @@ object frmCadModelo: TfrmCadModelo
             TextSettings.HorzAlign = Center
             Text = 'lblTitulo'
           end
-          object spbVoltar: TSpeedButton
+          object spbMenu: TSpeedButton
             Align = Left
             Margins.Left = 8.000000000000000000
             Position.X = 8.000000000000000000
@@ -57,7 +58,7 @@ object frmCadModelo: TfrmCadModelo
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             StyleLookup = 'backtoolbutton'
-            OnClick = spbVoltarClick
+            OnClick = spbMenuClick
           end
         end
       end
