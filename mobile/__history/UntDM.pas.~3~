@@ -31,14 +31,11 @@ type
     qryPedidosAPELIDO: TStringField;
     qryPedidosRAZAOSOCIAL: TStringField;
     qryPedidosCNPJCPF: TStringField;
-    qryAuxiliar: TFDQuery;
-    qryPedidosNUM_PEDIDO: TIntegerField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
-    function GetNewID(ATabela, ACampo: String): Integer;
   end;
 
 var
@@ -98,18 +95,6 @@ begin
 //      end;
 //    {$ENDIF}
 //  end;
-end;
-
-function TDM.GetNewID(ATabela, ACampo: String): Integer;
-const
-  _SQL = 'SELECT MAX(%s) AS NEW_ID FROM %s';
-
-begin
-  qryAuxiliar.Active := False;
-  qryAuxiliar.SQL.Text := Format(_SQL, [ACampo, ATabela]);
-  qryAuxiliar.Active := True;
-
-  Result := qryAuxiliar.FieldByName('NEW_ID').AsInteger + 1;
 end;
 
 end.

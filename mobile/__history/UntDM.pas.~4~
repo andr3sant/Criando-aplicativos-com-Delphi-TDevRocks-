@@ -32,7 +32,6 @@ type
     qryPedidosRAZAOSOCIAL: TStringField;
     qryPedidosCNPJCPF: TStringField;
     qryAuxiliar: TFDQuery;
-    qryPedidosNUM_PEDIDO: TIntegerField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
@@ -109,7 +108,7 @@ begin
   qryAuxiliar.SQL.Text := Format(_SQL, [ACampo, ATabela]);
   qryAuxiliar.Active := True;
 
-  Result := qryAuxiliar.FieldByName('NEW_ID').AsInteger + 1;
+  Result := qryAuxiliar.FieldByName('NEW_ID').AsInteger;
 end;
 
 end.

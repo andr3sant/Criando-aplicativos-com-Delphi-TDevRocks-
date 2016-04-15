@@ -24,8 +24,7 @@ uses
 
   {Units Declaradas durante o curso}
   System.IOUtils,
-  Lib,
-  UntPedidos;
+  Lib;
 
 type
   TfrmPrincipal = class(TForm)
@@ -86,7 +85,6 @@ type
     procedure FormCreate(Sender: TObject);
     procedure imgBtnCliClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure imgBtnPedClick(Sender: TObject);
   private
     { Private declarations }
     FActiveForm : TForm;
@@ -158,12 +156,6 @@ end;
 procedure TfrmPrincipal.imgBtnCliClick(Sender: TObject);
 begin
   AbrirForm(TfrmCadCli);         //Carrego o próximo form
-  MudarAba(tbitemApoio, Sender); //Mudar aba do menu para o apoio (novo form)
-end;
-
-procedure TfrmPrincipal.imgBtnPedClick(Sender: TObject);
-begin
-  AbrirForm(TfrmPedidos);         //Carrego o próximo form
   MudarAba(tbitemApoio, Sender); //Mudar aba do menu para o apoio (novo form)
 end;
 

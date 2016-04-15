@@ -159,7 +159,7 @@ inherited frmCadCli: TfrmCadCli
             ExplicitSize.cy = 49.000000000000000000
             object ListBox2: TListBox
               Align = Top
-              Size.Width = 50.000000000000000000
+              Size.Width = 320.000000000000000000
               Size.Height = 120.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'transparentlistboxstyle'
@@ -169,11 +169,11 @@ inherited frmCadCli: TfrmCadCli
               DefaultItemStyles.GroupHeaderStyle = ''
               DefaultItemStyles.GroupFooterStyle = ''
               GroupingKind = Grouped
-              Viewport.Width = 50.000000000000000000
+              Viewport.Width = 320.000000000000000000
               Viewport.Height = 120.000000000000000000
               object ListBoxItem4: TListBoxItem
                 Selectable = False
-                Size.Width = 50.000000000000000000
+                Size.Width = 320.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 0
@@ -185,7 +185,7 @@ inherited frmCadCli: TfrmCadCli
                   Margins.Top = 4.000000000000000000
                   Margins.Right = 4.000000000000000000
                   Margins.Bottom = 4.000000000000000000
-                  Size.Width = 42.000000000000000000
+                  Size.Width = 312.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
                   TextPrompt = 'Digite o CNPJ'
@@ -194,7 +194,7 @@ inherited frmCadCli: TfrmCadCli
               object ListBoxItem5: TListBoxItem
                 Selectable = False
                 Position.Y = 40.000000000000000000
-                Size.Width = 50.000000000000000000
+                Size.Width = 320.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
@@ -206,7 +206,7 @@ inherited frmCadCli: TfrmCadCli
                   Margins.Top = 4.000000000000000000
                   Margins.Right = 4.000000000000000000
                   Margins.Bottom = 4.000000000000000000
-                  Size.Width = 42.000000000000000000
+                  Size.Width = 312.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
                   TextPrompt = 'Digite o celular (99) 9999-9999'
@@ -214,7 +214,7 @@ inherited frmCadCli: TfrmCadCli
               end
               object ListBoxItem7: TListBoxItem
                 Position.Y = 80.000000000000000000
-                Size.Width = 50.000000000000000000
+                Size.Width = 320.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
@@ -226,7 +226,7 @@ inherited frmCadCli: TfrmCadCli
                   Margins.Top = 4.000000000000000000
                   Margins.Right = 4.000000000000000000
                   Margins.Bottom = 4.000000000000000000
-                  Size.Width = 42.000000000000000000
+                  Size.Width = 312.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
                   TextPrompt = 'Digite o telefone (99) 9999-9999'
@@ -235,7 +235,7 @@ inherited frmCadCli: TfrmCadCli
             end
             object toolStep2: TToolBar
               Position.Y = 120.000000000000000000
-              Size.Width = 50.000000000000000000
+              Size.Width = 320.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 1
@@ -245,7 +245,7 @@ inherited frmCadCli: TfrmCadCli
                 Margins.Top = 4.000000000000000000
                 Margins.Right = 4.000000000000000000
                 Margins.Bottom = 4.000000000000000000
-                Position.X = -2.000000000000000000
+                Position.X = 268.000000000000000000
                 Position.Y = 4.000000000000000000
                 Size.Width = 48.000000000000000000
                 Size.Height = 48.000000000000000000

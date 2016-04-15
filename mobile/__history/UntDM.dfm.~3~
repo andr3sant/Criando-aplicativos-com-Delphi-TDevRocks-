@@ -10,6 +10,7 @@ object DM: TDM
         'phi\mobile\database\TDevRocks.s3db'
       'OpenMode=ReadWrite'
       'DriverID=SQLite')
+    Connected = True
     LoginPrompt = False
     Left = 64
     Top = 24
@@ -65,7 +66,6 @@ object DM: TDM
       '  PED.ID,'
       '  PED.ID_CLIENTE,'
       '  PED.VALOR_TOTAL,'
-      '  PED.NUM_PEDIDO,'
       '  CLI.APELIDO,'
       '  CLI.RAZAOSOCIAL,'
       '  CLI.CNPJCPF'
@@ -112,15 +112,5 @@ object DM: TDM
       ReadOnly = True
       Size = 50
     end
-    object qryPedidosNUM_PEDIDO: TIntegerField
-      FieldName = 'NUM_PEDIDO'
-      Origin = 'NUM_PEDIDO'
-      Required = True
-    end
-  end
-  object qryAuxiliar: TFDQuery
-    Connection = fdcConexao
-    Left = 528
-    Top = 96
   end
 end

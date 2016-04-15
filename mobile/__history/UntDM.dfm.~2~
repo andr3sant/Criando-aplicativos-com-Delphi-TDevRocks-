@@ -10,6 +10,7 @@ object DM: TDM
         'phi\mobile\database\TDevRocks.s3db'
       'OpenMode=ReadWrite'
       'DriverID=SQLite')
+    Connected = True
     LoginPrompt = False
     Left = 64
     Top = 24
@@ -61,18 +62,7 @@ object DM: TDM
   object qryPedidos: TFDQuery
     Connection = fdcConexao
     SQL.Strings = (
-      'SELECT'
-      '  PED.ID,'
-      '  PED.ID_CLIENTE,'
-      '  PED.VALOR_TOTAL,'
-      '  PED.NUM_PEDIDO,'
-      '  CLI.APELIDO,'
-      '  CLI.RAZAOSOCIAL,'
-      '  CLI.CNPJCPF'
-      'FROM'
-      '  PEDIDOS PED'
-      '  INNER JOIN CLIENTES CLI'
-      '  ON (CLI.ID = PED.ID_CLIENTE)')
+      'SELECT * FROM PEDIDOS')
     Left = 160
     Top = 96
     object qryPedidosID: TStringField
@@ -89,38 +79,5 @@ object DM: TDM
       FieldName = 'VALOR_TOTAL'
       Origin = 'VALOR_TOTAL'
     end
-    object qryPedidosAPELIDO: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'APELIDO'
-      Origin = 'APELIDO'
-      ProviderFlags = []
-      ReadOnly = True
-    end
-    object qryPedidosRAZAOSOCIAL: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'RAZAOSOCIAL'
-      Origin = 'RAZAOSOCIAL'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 200
-    end
-    object qryPedidosCNPJCPF: TStringField
-      AutoGenerateValue = arDefault
-      FieldName = 'CNPJCPF'
-      Origin = 'CNPJCPF'
-      ProviderFlags = []
-      ReadOnly = True
-      Size = 50
-    end
-    object qryPedidosNUM_PEDIDO: TIntegerField
-      FieldName = 'NUM_PEDIDO'
-      Origin = 'NUM_PEDIDO'
-      Required = True
-    end
-  end
-  object qryAuxiliar: TFDQuery
-    Connection = fdcConexao
-    Left = 528
-    Top = 96
   end
 end
