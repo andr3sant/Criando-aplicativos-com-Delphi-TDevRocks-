@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{238B9613-79E6-487A-AA82-4B1616B64541}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="mobile\VendasApp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="server\ServidorTDevRocks.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="teste_conexao\TesteConexao.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="VendasApp">
+        <MSBuild Projects="mobile\VendasApp.dproj"/>
+    </Target>
+    <Target Name="VendasApp:Clean">
+        <MSBuild Projects="mobile\VendasApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VendasApp:Make">
+        <MSBuild Projects="mobile\VendasApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ServidorTDevRocks">
+        <MSBuild Projects="server\ServidorTDevRocks.dproj"/>
+    </Target>
+    <Target Name="ServidorTDevRocks:Clean">
+        <MSBuild Projects="server\ServidorTDevRocks.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ServidorTDevRocks:Make">
+        <MSBuild Projects="server\ServidorTDevRocks.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TesteConexao">
+        <MSBuild Projects="teste_conexao\TesteConexao.dproj"/>
+    </Target>
+    <Target Name="TesteConexao:Clean">
+        <MSBuild Projects="teste_conexao\TesteConexao.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TesteConexao:Make">
+        <MSBuild Projects="teste_conexao\TesteConexao.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="VendasApp;ServidorTDevRocks;TesteConexao"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="VendasApp:Clean;ServidorTDevRocks:Clean;TesteConexao:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="VendasApp:Make;ServidorTDevRocks:Make;TesteConexao:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

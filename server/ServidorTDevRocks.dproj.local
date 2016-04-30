@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/04/28 20:37:59.000.366,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2016/04/28 20:38:01.000.427,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2016/04/28 20:38:02.000.827,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:35:01.491,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:35:01.889,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:35:02.103,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:35:29.369,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\server\UntMain.pas=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:35:29.369,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\server\UntMain.dfm=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\FormUnit1.dfm</Transaction>
+    <Transaction>2016/04/28 21:35:53.181,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\server\UntWM.dfm=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.dfm</Transaction>
+    <Transaction>2016/04/28 21:35:53.181,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\server\UntWM.pas=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:37:10.017,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\server\UntSrvMetodosGerais.pas=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:37:10.017,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\server\UntSrvMetodosGerais.dfm=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.dfm</Transaction>
+    <Transaction>2016/04/28 21:37:40.139,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\server\ServidorTDevRocks.dproj=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

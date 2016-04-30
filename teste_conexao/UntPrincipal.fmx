@@ -1,0 +1,64 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    Position.X = 48.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    Position.X = 48.000000000000000000
+    Position.Y = 24.000000000000000000
+    Text = 'Digite seu nome'
+  end
+  object Button1: TButton
+    Position.X = 392.000000000000000000
+    Position.Y = 48.000000000000000000
+    TabOrder = 2
+    Text = 'Executar'
+    OnClick = Button1Click
+  end
+  object RadioButton1: TRadioButton
+    Position.X = 48.000000000000000000
+    Position.Y = 104.000000000000000000
+    TabOrder = 3
+    Text = 'EchoString'
+  end
+  object RadioButton2: TRadioButton
+    Position.X = 48.000000000000000000
+    Position.Y = 136.000000000000000000
+    TabOrder = 4
+    Text = 'ReverseString'
+  end
+  object lblResultadoServidor: TLabel
+    Position.X = 48.000000000000000000
+    Position.Y = 200.000000000000000000
+    Text = 'lblResultadoServidor'
+  end
+  object RadioButton3: TRadioButton
+    Position.X = 48.000000000000000000
+    Position.Y = 160.000000000000000000
+    TabOrder = 6
+    Text = 'Concatenar'
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 8
+    Position.X = 224.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

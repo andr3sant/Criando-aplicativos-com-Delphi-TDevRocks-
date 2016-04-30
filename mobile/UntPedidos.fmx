@@ -21,14 +21,23 @@ object frmPedidos: TfrmPedidos
       Size.Height = 480.000000000000000000
       Size.PlatformDefault = False
       TabHeight = 49.000000000000000000
-      TabIndex = 1
+      TabIndex = 0
       TabOrder = 0
       TabPosition = PlatformDefault
+      Sizes = (
+        320s
+        431s
+        320s
+        431s
+        320s
+        431s
+        320s
+        431s)
       object tbitemListagem: TTabItem
         CustomIcon = <
           item
           end>
-        IsSelected = False
+        IsSelected = True
         Size.Width = 80.000000000000000000
         Size.Height = 49.000000000000000000
         Size.PlatformDefault = False
@@ -90,7 +99,7 @@ object frmPedidos: TfrmPedidos
         CustomIcon = <
           item
           end>
-        IsSelected = True
+        IsSelected = False
         Size.Width = 80.000000000000000000
         Size.Height = 49.000000000000000000
         Size.PlatformDefault = False
@@ -205,6 +214,8 @@ object frmPedidos: TfrmPedidos
         StyleLookup = ''
         TabOrder = 0
         Text = 'Itens'
+        ExplicitSize.cx = 80.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
         object ToolBar2: TToolBar
           Size.Width = 320.000000000000000000
           Size.Height = 48.000000000000000000
@@ -243,6 +254,8 @@ object frmPedidos: TfrmPedidos
         StyleLookup = ''
         TabOrder = 0
         Text = 'Apoio'
+        ExplicitSize.cx = 80.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
         object lytApoio: TLayout
           Align = Client
           Size.Width = 320.000000000000000000
