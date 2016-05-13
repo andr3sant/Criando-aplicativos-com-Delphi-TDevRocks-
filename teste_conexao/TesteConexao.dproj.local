@@ -4,15 +4,17 @@
     <Transaction>2016/04/28 20:37:59.000.366,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
     <Transaction>2016/04/28 20:38:01.000.427,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\ServerMethodsUnit1.pas</Transaction>
     <Transaction>2016/04/28 20:38:02.000.827,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
-    <Transaction>2016/04/28 21:41:37.279,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2016/04/28 21:41:56.588,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\UntPrincipal.fmx=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>2016/04/28 21:41:56.588,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\UntPrincipal.pas=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2016/04/28 21:42:08.073,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\TesteConexao.dproj=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2016/04/28 21:45:34.004,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\ClientClassesUnit1.pas</Transaction>
-    <Transaction>2016/04/28 21:45:34.512,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\ClientModuleUnit1.pas</Transaction>
-    <Transaction>2016/04/28 21:47:04.665,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\Proxy.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\ClientClassesUnit1.pas</Transaction>
-    <Transaction>2016/04/28 21:50:56.279,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\UntCM.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\ClientModuleUnit1.pas</Transaction>
-    <Transaction>2016/04/28 21:50:56.279,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\UntCM.dfm=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\ClientModuleUnit1.dfm</Transaction>
-  </Transactions>  <ActiveMobileDevice>   <NoProfile iOSSimulator="iPhone5"/>
-  </ActiveMobileDevice>
+    <Transaction>2016/04/28 21:41:37.000.279,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/04/28 21:41:56.000.588,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\UntPrincipal.fmx=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2016/04/28 21:41:56.000.588,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\UntPrincipal.pas=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/04/28 21:42:08.000.073,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\TesteConexao.dproj=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2016/04/28 21:45:34.000.512,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\ClientModuleUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:45:34.000.004,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:47:04.000.665,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\Proxy.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:50:56.000.279,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\UntCM.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\ClientModuleUnit1.pas</Transaction>
+    <Transaction>2016/04/28 21:50:56.000.279,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\UntCM.dfm=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\ClientModuleUnit1.dfm</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
 </BorlandProject>

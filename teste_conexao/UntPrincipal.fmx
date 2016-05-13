@@ -11,54 +11,167 @@ object Form1: TForm1
   object Edit1: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 0
-    Position.X = 48.000000000000000000
-    Position.Y = 48.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 32.000000000000000000
     Size.Width = 169.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
   end
   object Label1: TLabel
-    Position.X = 48.000000000000000000
-    Position.Y = 24.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
     Text = 'Digite seu nome'
   end
   object Button1: TButton
-    Position.X = 392.000000000000000000
-    Position.Y = 48.000000000000000000
+    Position.X = 352.000000000000000000
+    Position.Y = 32.000000000000000000
     TabOrder = 2
     Text = 'Executar'
     OnClick = Button1Click
   end
   object RadioButton1: TRadioButton
-    Position.X = 48.000000000000000000
-    Position.Y = 104.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 64.000000000000000000
     TabOrder = 3
     Text = 'EchoString'
   end
   object RadioButton2: TRadioButton
-    Position.X = 48.000000000000000000
-    Position.Y = 136.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 96.000000000000000000
     TabOrder = 4
     Text = 'ReverseString'
   end
   object lblResultadoServidor: TLabel
-    Position.X = 48.000000000000000000
-    Position.Y = 200.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 144.000000000000000000
     Text = 'lblResultadoServidor'
   end
   object RadioButton3: TRadioButton
-    Position.X = 48.000000000000000000
-    Position.Y = 160.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 120.000000000000000000
     TabOrder = 6
     Text = 'Concatenar'
   end
   object Edit2: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     TabOrder = 8
-    Position.X = 224.000000000000000000
-    Position.Y = 48.000000000000000000
+    Position.X = 184.000000000000000000
+    Position.Y = 32.000000000000000000
     Size.Width = 161.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TMultiDetailItemAppearance'
+    ItemEditAppearanceClassName = 'TMultiDetailDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Position.X = 8.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 281.000000000000000000
+    Size.Height = 289.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+  end
+  object Button2: TButton
+    Position.X = 304.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    Text = 'Carregar Todos'
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Position.X = 304.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 12
+    Text = 'Carregar por ID'
+    OnClick = Button3Click
+  end
+  object edtIDCliente: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 13
+    Position.X = 304.000000000000000000
+    Position.Y = 216.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object memClientes: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 544
+    Top = 232
+    object memClientesNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 30
+    end
+    object memClientesSOBRENOME: TStringField
+      FieldName = 'SOBRENOME'
+      Origin = 'SOBRENOME'
+      Size = 100
+    end
+    object memClientesSEXO: TStringField
+      FieldName = 'SEXO'
+      Origin = 'SEXO'
+      Size = 30
+    end
+    object memClientesID: TFDAutoIncField
+      FieldName = 'ID'
+      Origin = 'ID'
+      ReadOnly = True
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = memClientes
+    ScopeMappings = <>
+    Left = 536
+    Top = 120
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 540
+    Top = 173
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'NOME'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'SOBRENOME'
+          ControlMemberName = 'Detail1'
+        end
+        item
+          SourceMemberName = 'SEXO'
+          ControlMemberName = 'Detail2'
+        end
+        item
+          SourceMemberName = 'ID'
+          ControlMemberName = 'Detail3'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object FDStanStorageBinLink1: TFDStanStorageBinLink
+    Left = 536
+    Top = 16
+  end
+  object FDStanStorageJSONLink1: TFDStanStorageJSONLink
+    Left = 536
+    Top = 72
   end
 end
