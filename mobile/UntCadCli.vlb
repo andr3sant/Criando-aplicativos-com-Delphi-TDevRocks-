@@ -20,7 +20,7 @@ Visible=False
 
 [tbitemListagem]
 Coordinates=179,660,90,33
-Visible=False
+Visible=True
 
 [ActionList1]
 Coordinates=312,111,70,33
@@ -37,12 +37,12 @@ Coordinates=190,10,89,33
 Visible=False
 
 []
-Coordinates=780,570,79,33
+Coordinates=240,40,92,105
 Visible=False
 ExplicitSubNodes=ItemData.Text
 
 [BindSourceDB1]
-Coordinates=320,10,92,249
+Coordinates=710,290,92,195
 
 [BindingsList1]
 Coordinates=136,175,82,33
@@ -100,6 +100,7 @@ Coordinates=10,440,57,51
 
 [edtApelido]
 Coordinates=10,300,67,51
+Visible=True
 
 [spbEditar]
 Coordinates=589,532,61,33
@@ -127,7 +128,7 @@ Coordinates=10,580,72,51
 Visible=True
 
 [imgFotoCli]
-Coordinates=190,440,68,51
+Coordinates=610,0,68,51
 
 [actFotoBiblioteca]
 Coordinates=118,260,100,33
@@ -136,14 +137,47 @@ Coordinates=118,260,100,33
 Coordinates=19,260,89,33
 
 [spbMenu]
-Coordinates=31,660,61,33
+Coordinates=31,660,59,33
 Visible=False
 
 [lblTituloEdicao]
-Coordinates=589,336,46,33
+Coordinates=589,336,88,33
 Visible=False
 
 [spbPasso2]
-Coordinates=520,560,61,33
+Coordinates=520,560,68,33
 Visible=False
+
+[DM.qryAuxiliar]
+Coordinates=710,190,87,51
+
+[fgActionSheet1]
+Coordinates=237,331,89,33
+
+[toolStep2]
+Coordinates=820,620,61,33
+Visible=False
+
+[toolStep1]
+Coordinates=750,620,61,33
+Visible=False
+
+[DM.qryPedidos]
+Coordinates=710,0,89,177
+
+[DM.qryAuxiliar2]
+Coordinates=710,560,92,51
+
+[DM.memAuxiliar]
+Coordinates=600,560,95,51
+
+[DM.]
+Coordinates=331,407,113,124
+
+[DM.memClientes]
+Coordinates=327,20,97,33
+Visible=False
+
+[BindSourceDB2]
+Coordinates=327,20,92,141
 

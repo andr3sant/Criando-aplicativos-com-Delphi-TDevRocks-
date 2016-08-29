@@ -1,15 +1,29 @@
 inherited frmCadCli: TfrmCadCli
   Caption = 'frmCadModelo1'
+  ClientHeight = 570
+  ClientWidth = 380
   OnClose = FormClose
   DesignerMasterStyle = 3
   inherited lytBase: TLayout
+    Size.Width = 380.000000000000000000
+    Size.Height = 570.000000000000000000
     inherited tbctrlPrincipal: TTabControl
+      Size.Width = 380.000000000000000000
+      Size.Height = 570.000000000000000000
       TabPosition = Top
+      Sizes = (
+        380s
+        521s
+        380s
+        521s)
       inherited tbitemListagem: TTabItem
+        Size.Width = 190.000000000000000000
         ExplicitSize.cx = 160.000000000000000000
         ExplicitSize.cy = 49.000000000000000000
         inherited toolSuperior: TToolBar
+          Size.Width = 380.000000000000000000
           inherited lblTitulo: TLabel
+            Size.Width = 380.000000000000000000
             StyleLookup = 'listboxheaderlabel'
             Text = 'Clientes'
           end
@@ -19,7 +33,7 @@ inherited frmCadCli: TfrmCadCli
           object spbInserir: TSpeedButton
             Align = Right
             Margins.Right = 8.000000000000000000
-            Position.X = 264.000000000000000000
+            Position.X = 324.000000000000000000
             Size.Width = 48.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
@@ -34,8 +48,8 @@ inherited frmCadCli: TfrmCadCli
           HeaderAppearanceClassName = 'TListHeaderObjects'
           FooterAppearanceClassName = 'TListHeaderObjects'
           Align = Client
-          Size.Width = 320.000000000000000000
-          Size.Height = 383.000000000000000000
+          Size.Width = 380.000000000000000000
+          Size.Height = 473.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
           ItemAppearanceObjects.ItemObjects.Image.Visible = True
@@ -44,24 +58,30 @@ inherited frmCadCli: TfrmCadCli
         end
       end
       inherited tbitemEdicao: TTabItem
+        Size.Width = 190.000000000000000000
         ExplicitSize.cx = 160.000000000000000000
         ExplicitSize.cy = 49.000000000000000000
         object tbctrlEdicao: TTabControl
           Align = Top
           Position.Y = 48.000000000000000000
-          Size.Width = 320.000000000000000000
+          Size.Width = 380.000000000000000000
           Size.Height = 215.000000000000000000
           Size.PlatformDefault = False
           TabHeight = 49.000000000000000000
           TabIndex = 0
           TabOrder = 0
           TabPosition = Top
+          Sizes = (
+            380s
+            166s
+            380s
+            166s)
           object tbitemStep1: TTabItem
             CustomIcon = <
               item
               end>
             IsSelected = True
-            Size.Width = 160.000000000000000000
+            Size.Width = 190.000000000000000000
             Size.Height = 49.000000000000000000
             Size.PlatformDefault = False
             StyleLookup = ''
@@ -71,7 +91,7 @@ inherited frmCadCli: TfrmCadCli
             ExplicitSize.cy = 49.000000000000000000
             object ListBox1: TListBox
               Align = Top
-              Size.Width = 320.000000000000000000
+              Size.Width = 380.000000000000000000
               Size.Height = 120.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'transparentlistboxstyle'
@@ -81,11 +101,11 @@ inherited frmCadCli: TfrmCadCli
               DefaultItemStyles.GroupHeaderStyle = ''
               DefaultItemStyles.GroupFooterStyle = ''
               GroupingKind = Grouped
-              Viewport.Width = 320.000000000000000000
+              Viewport.Width = 380.000000000000000000
               Viewport.Height = 120.000000000000000000
               object ListBoxItem1: TListBoxItem
                 Selectable = False
-                Size.Width = 320.000000000000000000
+                Size.Width = 380.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 0
@@ -97,7 +117,7 @@ inherited frmCadCli: TfrmCadCli
                   Margins.Top = 4.000000000000000000
                   Margins.Right = 4.000000000000000000
                   Margins.Bottom = 4.000000000000000000
-                  Size.Width = 312.000000000000000000
+                  Size.Width = 372.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
                   TextPrompt = 'Digite o apelido do cliente'
@@ -106,7 +126,7 @@ inherited frmCadCli: TfrmCadCli
               object ListBoxItem2: TListBoxItem
                 Selectable = False
                 Position.Y = 40.000000000000000000
-                Size.Width = 320.000000000000000000
+                Size.Width = 380.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
@@ -118,7 +138,7 @@ inherited frmCadCli: TfrmCadCli
                   Margins.Top = 4.000000000000000000
                   Margins.Right = 4.000000000000000000
                   Margins.Bottom = 4.000000000000000000
-                  Size.Width = 312.000000000000000000
+                  Size.Width = 372.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
                   TextPrompt = 'Digite a raz'#227'o social'
@@ -127,14 +147,14 @@ inherited frmCadCli: TfrmCadCli
             end
             object toolStep1: TToolBar
               Position.Y = 120.000000000000000000
-              Size.Width = 320.000000000000000000
+              Size.Width = 380.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 1
               object spbPasso2: TSpeedButton
                 Align = Right
                 Margins.Right = 8.000000000000000000
-                Position.X = 264.000000000000000000
+                Position.X = 324.000000000000000000
                 Size.Width = 48.000000000000000000
                 Size.Height = 48.000000000000000000
                 Size.PlatformDefault = False
@@ -149,7 +169,7 @@ inherited frmCadCli: TfrmCadCli
               item
               end>
             IsSelected = False
-            Size.Width = 160.000000000000000000
+            Size.Width = 190.000000000000000000
             Size.Height = 49.000000000000000000
             Size.PlatformDefault = False
             StyleLookup = ''
@@ -159,7 +179,7 @@ inherited frmCadCli: TfrmCadCli
             ExplicitSize.cy = 49.000000000000000000
             object ListBox2: TListBox
               Align = Top
-              Size.Width = 50.000000000000000000
+              Size.Width = 380.000000000000000000
               Size.Height = 120.000000000000000000
               Size.PlatformDefault = False
               StyleLookup = 'transparentlistboxstyle'
@@ -169,11 +189,11 @@ inherited frmCadCli: TfrmCadCli
               DefaultItemStyles.GroupHeaderStyle = ''
               DefaultItemStyles.GroupFooterStyle = ''
               GroupingKind = Grouped
-              Viewport.Width = 50.000000000000000000
+              Viewport.Width = 380.000000000000000000
               Viewport.Height = 120.000000000000000000
               object ListBoxItem4: TListBoxItem
                 Selectable = False
-                Size.Width = 50.000000000000000000
+                Size.Width = 380.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 0
@@ -185,7 +205,7 @@ inherited frmCadCli: TfrmCadCli
                   Margins.Top = 4.000000000000000000
                   Margins.Right = 4.000000000000000000
                   Margins.Bottom = 4.000000000000000000
-                  Size.Width = 42.000000000000000000
+                  Size.Width = 372.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
                   TextPrompt = 'Digite o CNPJ'
@@ -194,7 +214,7 @@ inherited frmCadCli: TfrmCadCli
               object ListBoxItem5: TListBoxItem
                 Selectable = False
                 Position.Y = 40.000000000000000000
-                Size.Width = 50.000000000000000000
+                Size.Width = 380.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 1
@@ -206,7 +226,7 @@ inherited frmCadCli: TfrmCadCli
                   Margins.Top = 4.000000000000000000
                   Margins.Right = 4.000000000000000000
                   Margins.Bottom = 4.000000000000000000
-                  Size.Width = 42.000000000000000000
+                  Size.Width = 372.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
                   TextPrompt = 'Digite o celular (99) 9999-9999'
@@ -214,7 +234,7 @@ inherited frmCadCli: TfrmCadCli
               end
               object ListBoxItem7: TListBoxItem
                 Position.Y = 80.000000000000000000
-                Size.Width = 50.000000000000000000
+                Size.Width = 380.000000000000000000
                 Size.Height = 40.000000000000000000
                 Size.PlatformDefault = False
                 TabOrder = 2
@@ -226,7 +246,7 @@ inherited frmCadCli: TfrmCadCli
                   Margins.Top = 4.000000000000000000
                   Margins.Right = 4.000000000000000000
                   Margins.Bottom = 4.000000000000000000
-                  Size.Width = 42.000000000000000000
+                  Size.Width = 372.000000000000000000
                   Size.Height = 32.000000000000000000
                   Size.PlatformDefault = False
                   TextPrompt = 'Digite o telefone (99) 9999-9999'
@@ -235,7 +255,7 @@ inherited frmCadCli: TfrmCadCli
             end
             object toolStep2: TToolBar
               Position.Y = 120.000000000000000000
-              Size.Width = 50.000000000000000000
+              Size.Width = 380.000000000000000000
               Size.Height = 48.000000000000000000
               Size.PlatformDefault = False
               TabOrder = 1
@@ -245,7 +265,7 @@ inherited frmCadCli: TfrmCadCli
                 Margins.Top = 4.000000000000000000
                 Margins.Right = 4.000000000000000000
                 Margins.Bottom = 4.000000000000000000
-                Position.X = -2.000000000000000000
+                Position.X = 328.000000000000000000
                 Position.Y = 4.000000000000000000
                 Size.Width = 48.000000000000000000
                 Size.Height = 48.000000000000000000
@@ -268,13 +288,13 @@ inherited frmCadCli: TfrmCadCli
           end
         end
         object toolSupEdicao: TToolBar
-          Size.Width = 320.000000000000000000
+          Size.Width = 380.000000000000000000
           Size.Height = 48.000000000000000000
           Size.PlatformDefault = False
           TabOrder = 1
           object lblTituloEdicao: TLabel
             Align = Contents
-            Size.Width = 320.000000000000000000
+            Size.Width = 380.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
             StyleLookup = 'listboxheaderlabel'
@@ -295,7 +315,7 @@ inherited frmCadCli: TfrmCadCli
           object spbEditar: TSpeedButton
             Align = Right
             Margins.Right = 8.000000000000000000
-            Position.X = 264.000000000000000000
+            Position.X = 324.000000000000000000
             Size.Width = 48.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
@@ -313,8 +333,8 @@ inherited frmCadCli: TfrmCadCli
           Margins.Top = 10.000000000000000000
           Margins.Right = 10.000000000000000000
           Margins.Bottom = 10.000000000000000000
-          Size.Width = 300.000000000000000000
-          Size.Height = 148.000000000000000000
+          Size.Width = 360.000000000000000000
+          Size.Height = 238.000000000000000000
           Size.PlatformDefault = False
           OnClick = imgFotoCliClick
         end
@@ -366,62 +386,36 @@ inherited frmCadCli: TfrmCadCli
     Top = 401
     object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'APELIDO'
+      DataSource = BindSourceDB2
+      FieldName = 'NOME'
       Control = lsviewLista
       FillExpressions = <
         item
-          SourceMemberName = 'RAZAOSOCIAL'
+          SourceMemberName = 'SOBRENOME'
           ControlMemberName = 'Detail1'
-        end
-        item
-          SourceMemberName = 'FOTO'
-          ControlMemberName = 'Bitmap'
         end>
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end
     object LinkControlToField1: TLinkControlToField
       Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'APELIDO'
+      DataSource = BindSourceDB2
+      FieldName = 'NOME'
       Control = edtApelido
       Track = False
     end
     object LinkControlToField2: TLinkControlToField
       Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'RAZAOSOCIAL'
+      DataSource = BindSourceDB2
+      FieldName = 'SOBRENOME'
       Control = edtRazaoSocial
       Track = False
     end
-    object LinkPropertyToFieldBitmap: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'FOTO'
-      Component = imgFotoCli
-      ComponentProperty = 'Bitmap'
-    end
-    object LinkControlToField3: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'CNPJCPF'
-      Control = edtCNPJ
-      Track = False
-    end
-    object LinkControlToField4: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'CELULAR'
-      Control = edtCelular
-      Track = False
-    end
-    object LinkControlToField5: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = BindSourceDB1
-      FieldName = 'FIXO'
-      Control = edtTelefone
-      Track = False
-    end
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = DM.memClientes
+    ScopeMappings = <>
+    Left = 176
+    Top = 272
   end
 end

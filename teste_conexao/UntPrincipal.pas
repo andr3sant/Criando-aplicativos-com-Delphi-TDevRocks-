@@ -14,7 +14,8 @@ uses
   Data.FireDACJSONReflect, MultiDetailAppearanceU, System.Rtti,
   System.Bindings.Outputs, Fmx.Bind.Editors, Data.Bind.EngExt,
   Fmx.Bind.DBEngExt, Data.Bind.Components, Data.Bind.DBScope,
-  FireDAC.Stan.StorageJSON, FireDAC.Stan.StorageBin;
+  FireDAC.Stan.StorageJSON, FireDAC.Stan.StorageBin, FMX.Grid.Style,
+  Fmx.Bind.Grid, Data.Bind.Grid, FMX.ScrollBox, FMX.Grid;
 
 type
   TForm1 = class(TForm)
@@ -33,16 +34,26 @@ type
     BindingsList1: TBindingsList;
     FDStanStorageBinLink1: TFDStanStorageBinLink;
     FDStanStorageJSONLink1: TFDStanStorageJSONLink;
-    Button3: TButton;
-    edtIDCliente: TEdit;
     memClientesNOME: TStringField;
     memClientesSOBRENOME: TStringField;
     memClientesSEXO: TStringField;
     memClientesID: TFDAutoIncField;
     LinkListControlToField1: TLinkListControlToField;
+    Button4: TButton;
+    edtIDCliente: TEdit;
+    Button3: TButton;
+    StringGrid1: TStringGrid;
+    StringGrid2: TStringGrid;
+    memPedidos: TFDMemTable;
+    memItens_Pedidos: TFDMemTable;
+    BindSourceDB2: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource;
+    BindSourceDB3: TBindSourceDB;
+    LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -95,6 +106,25 @@ begin
   memClientes.Active := False;
   memClientes.AppendData(TFDJSONDataSetsReader.GetListValue(ClientePorID, 0));
   memClientes.Active := True;
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+var
+  DS_PedidosEItens : TFDJSONDataSets;
+begin
+  memPedidos.Active := False;
+  memItens_Pedidos.Active := False;
+
+  //Download
+  DS_PedidosEItens := CM.SrvMetodosGeraisClient.GetPedidosEItens();
+
+  Assert(TFDJSONDataSetsReader.GetListCount(DS_PedidosEItens) = 2);
+
+  memPedidos.AppendData(TFDJSONDataSetsReader.GetListValueByName(DS_PedidosEItens, 'PEDIDOS'));
+  memItens_Pedidos.AppendData(TFDJSONDataSetsReader.GetListValueByName(DS_PedidosEItens, 'ITEM_PEDIDO'));
+
+  memPedidos.Active := True;
+  memItens_Pedidos.Active := True;
 end;
 
 end.

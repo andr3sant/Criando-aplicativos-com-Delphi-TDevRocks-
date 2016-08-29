@@ -25,7 +25,7 @@ uses
   {Units Declaradas durante o curso}
   System.IOUtils,
   Lib,
-  UntPedidos;
+  UntPedidos, UntSincronismo;
 
 type
   TfrmPrincipal = class(TForm)
@@ -87,6 +87,8 @@ type
     procedure imgBtnCliClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure imgBtnPedClick(Sender: TObject);
+    procedure imgBtnSyncClick(Sender: TObject);
+    procedure imgBtnFornClick(Sender: TObject);
   private
     { Private declarations }
     FActiveForm : TForm;
@@ -106,7 +108,7 @@ implementation
 {$R *.fmx}
 
 uses
-  UntCadCli;
+  UntCadCli, UntForn;
 
 procedure TfrmPrincipal.AbrirForm(AFormClass: TComponentClass);
 var
@@ -161,9 +163,21 @@ begin
   MudarAba(tbitemApoio, Sender); //Mudar aba do menu para o apoio (novo form)
 end;
 
+procedure TfrmPrincipal.imgBtnFornClick(Sender: TObject);
+begin
+  AbrirForm(TfrmForn);         //Carrego o próximo form
+  MudarAba(tbitemApoio, Sender); //Mudar aba do menu para o apoio (novo form)
+end;
+
 procedure TfrmPrincipal.imgBtnPedClick(Sender: TObject);
 begin
   AbrirForm(TfrmPedidos);         //Carrego o próximo form
+  MudarAba(tbitemApoio, Sender); //Mudar aba do menu para o apoio (novo form)
+end;
+
+procedure TfrmPrincipal.imgBtnSyncClick(Sender: TObject);
+begin
+  AbrirForm(TfrmSincronismo);         //Carrego o próximo form
   MudarAba(tbitemApoio, Sender); //Mudar aba do menu para o apoio (novo form)
 end;
 

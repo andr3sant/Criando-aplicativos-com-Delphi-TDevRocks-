@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2016/04/28 21:38:19.379,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\GrupoTDevRocks.groupproj=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj</Transaction>
+	<Transactions>
+    <Transaction>2016/04/28 21:38:19.000.379,C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\ProjectGroup1.groupproj=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\GrupoTDevRocks.groupproj</Transaction>
   </Transactions>
-  <Default.Personality>
-    <Projects ActiveProject="C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\teste_conexao\TesteConexao.dproj"/>
-  </Default.Personality>
+	<Default.Personality>
+		<Projects ActiveProject="C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\VendasApp.dproj"/>
+	</Default.Personality>
 </BorlandProject>

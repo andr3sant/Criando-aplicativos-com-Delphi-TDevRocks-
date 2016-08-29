@@ -6,7 +6,7 @@
         <MainSource>VendasApp.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Win64</Platform>
+        <Platform Condition="'$(Platform)'==''">Android</Platform>
         <TargetedPlatforms>1119</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
@@ -322,6 +322,8 @@
         <PF_EntitlementExtraKeyValuesDebug>&lt;key&gt;get-task-allow&lt;/key&gt;&lt;true/&gt;&lt;key&gt;com.apple.developer.team-identifier&lt;/key&gt;&lt;string&gt;7SEGV527DB&lt;/string&gt;</PF_EntitlementExtraKeyValuesDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
         <AppEnableHighDPI>true</AppEnableHighDPI>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
@@ -372,6 +374,20 @@
             <Form>frmPedidos</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="UntSincronismo.pas">
+            <Form>frmSincronismo</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="Proxy.pas"/>
+        <DCCReference Include="UntCM.pas">
+            <Form>CM</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="UntForn.pas">
+            <Form>frmForn</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -393,8 +409,8 @@
                     <Source Name="MainSource">VendasApp.dpr</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k230.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp230.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k240.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp240.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
@@ -488,12 +504,6 @@
                 <DeployFile LocalName="Android\Release\libVendasApp.so" Configuration="Release" Class="ProjectOutput">
                     <Platform Name="Android">
                         <RemoteName>libVendasApp.so</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Win64\Debug\VendasApp.rsm" Configuration="Debug" Class="DebugSymbols">
-                    <Platform Name="Win64">
-                        <RemoteName>VendasApp.rsm</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -1504,6 +1514,10 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">True</Platform>
             </Platforms>
+            <DataSnapProxyLookup>
+                <Proxy>{CE431460-DAAE-4019-AFC9-75CDF75AC854}</Proxy>
+                <Proxy>{6118329D-A93A-41FE-9552-F60CEAC6DAB1}</Proxy>
+            </DataSnapProxyLookup>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

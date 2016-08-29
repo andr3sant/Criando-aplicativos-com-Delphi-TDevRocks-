@@ -123,4 +123,83 @@ object DM: TDM
     Left = 528
     Top = 96
   end
+  object memAuxiliar: TFDMemTable
+    CachedUpdates = True
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 528
+    Top = 160
+  end
+  object qryAuxiliar2: TFDQuery
+    Connection = fdcConexao
+    Left = 456
+    Top = 96
+  end
+  object FDStanStorageBinLink1: TFDStanStorageBinLink
+    Left = 528
+    Top = 248
+  end
+  object memClientes: TFDMemTable
+    CachedUpdates = True
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 64
+    Top = 176
+    object memClientesNOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 30
+    end
+    object memClientesSOBRENOME: TStringField
+      FieldName = 'SOBRENOME'
+      Origin = 'SOBRENOME'
+      Size = 100
+    end
+  end
+  object qryFornecedores: TFDQuery
+    Connection = fdcConexao
+    SQL.Strings = (
+      'SELECT * FROM FORNECEDOR')
+    Left = 64
+    Top = 304
+    object qryFornecedoresAPELIDO: TStringField
+      FieldName = 'APELIDO'
+      Origin = 'APELIDO'
+      Size = 30
+    end
+    object qryFornecedoresRAZAOSOCIAL: TStringField
+      FieldName = 'RAZAOSOCIAL'
+      Origin = 'RAZAOSOCIAL'
+      Size = 100
+    end
+    object qryFornecedoresENDERECO: TStringField
+      FieldName = 'ENDERECO'
+      Origin = 'ENDERECO'
+      Size = 100
+    end
+    object qryFornecedoresNUMERO: TIntegerField
+      FieldName = 'NUMERO'
+      Origin = 'NUMERO'
+    end
+    object qryFornecedoresESTADO: TStringField
+      FieldName = 'ESTADO'
+      Origin = 'ESTADO'
+      Size = 2
+    end
+    object qryFornecedoresCIDADE: TStringField
+      FieldName = 'CIDADE'
+      Origin = 'CIDADE'
+      Size = 30
+    end
+  end
 end

@@ -1,100 +1,138 @@
 ﻿[lsviewPedidos]
-Coordinates=10,10,89,231
+Coordinates=20,10,107,278
 Visible=True
 
 [lblTituloLista]
-Coordinates=76,610,78,51
+Coordinates=76,610,87,36
+Visible=False
 
 [spbNovo]
-Coordinates=1,610,58,51
+Coordinates=1,610,65,36
+Visible=False
 
 [ToolBar1]
-Coordinates=3,560,58,33
+Coordinates=3,560,67,36
+Visible=False
 
 [lytBase]
-Coordinates=250,610,50,33
+Coordinates=250,610,57,36
+Visible=False
 
 [spbMenu]
-Coordinates=173,610,59,51
+Coordinates=173,610,67,36
+Visible=False
 
 []
 Coordinates=251,111,91,36
 
 [DM.qryClientes]
-Coordinates=940,0,89,177
+Coordinates=720,70,103,212
 
 [DM.qryPedidos]
-Coordinates=200,10,89,33
+Coordinates=200,10,102,36
 Visible=False
 
 [BindSourceDB1]
-Coordinates=250,0,92,195
+Coordinates=250,0,106,234
 
 [BindingsList1]
-Coordinates=118,152,82,33
+Coordinates=118,152,91,36
 
 [tbctrlPrincipal]
-Coordinates=80,560,83,33
+Coordinates=80,560,93,36
+Visible=False
 
 [tbitemListagem]
-Coordinates=254,560,90,33
+Coordinates=254,560,102,36
+Visible=False
 
 [tbitemEdicao]
-Coordinates=175,560,79,33
+Coordinates=175,560,89,36
+Visible=False
 
 [lstPedido]
-Coordinates=830,300,116,177
+Coordinates=350,690,68,36
+Visible=False
 
 [Label1]
-Coordinates=630,160,46,51
+Coordinates=690,610,53,36
+Visible=False
 
 [Label2]
-Coordinates=680,250,46,51
+Coordinates=690,680,53,36
+Visible=False
 
 [ActionList1]
-Coordinates=272,336,70,33
+Coordinates=272,336,78,36
 
 [tbitemApoio]
-Coordinates=272,388,74,33
+Coordinates=565,621,83,36
+Visible=False
 
 [spbSelCli]
-Coordinates=660,390,61,51
+Coordinates=690,750,69,36
+Visible=False
 
 [actMudarAba]
-Coordinates=183,419,79,33
+Coordinates=183,419,91,36
 
 [ToolBar2]
-Coordinates=124,419,58,33
+Coordinates=489,620,67,36
+Visible=False
 
 [ListBoxItem3]
-Coordinates=35,419,79,33
+Coordinates=400,620,89,36
+Visible=False
 
 [ListBoxItem1]
-Coordinates=452,1,79,33
+Coordinates=490,500,89,36
+Visible=False
 
 [ListBoxItem5]
-Coordinates=452,53,79,69
+Coordinates=452,53,92,80
 ExplicitSubNodes=ItemData.Detail;ItemData.Text
 
 [ListBoxItem2]
-Coordinates=640,50,79,33
-Visible=True
+Coordinates=690,560,89,36
+Visible=False
 
 [DM.qryAuxiliar]
-Coordinates=350,340,87,51
+Coordinates=720,0,99,58
 
 [spbRetPedidos]
-Coordinates=19,260,89,51
+Coordinates=370,560,102,36
+Visible=False
 
 [ListBoxItem4]
-Coordinates=452,157,79,33
+Coordinates=600,460,89,36
+Visible=False
 
 [tbitemItens]
-Coordinates=452,209,69,33
+Coordinates=600,512,78,36
+Visible=False
 
 [lytApoio]
-Coordinates=452,261,55,33
+Coordinates=600,564,61,36
+Visible=False
 
 [edtCliente]
-Coordinates=250,220,64,51
+Coordinates=500,560,73,36
+Visible=False
+
+[ToolBar3]
+Coordinates=10,510,67,36
+Visible=False
+
+[SpeedButton1]
+Coordinates=100,490,96,36
+Visible=False
+
+[DM.qryAuxiliar2]
+Coordinates=720,370,106,58
+
+[DM.memAuxiliar]
+Coordinates=720,300,109,58
+
+[DM.memClientes]
+Coordinates=710,440,113,102
 

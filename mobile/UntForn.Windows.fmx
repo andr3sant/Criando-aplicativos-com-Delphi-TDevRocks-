@@ -1,0 +1,98 @@
+inherited frmForn_Windows: TfrmForn_Windows
+  DesignerMasterStyle = 0
+  inherited lytBase: TLayout
+    inherited tbCtrlPrincipal: TTabControl
+      Sizes = (
+        320s
+        431s
+        320s
+        431s)
+      inherited tbItemLista: TTabItem
+        Size.Width = 44.000000000000000000
+        ExplicitSize.cx = 159.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+      end
+      inherited tbitemEdicao: TTabItem
+        Size.Width = 55.000000000000000000
+        ExplicitSize.cx = 159.000000000000000000
+        ExplicitSize.cy = 49.000000000000000000
+        inherited tbCtrlEdicao: TTabControl
+          Sizes = (
+            320s
+            192s
+            320s
+            192s)
+          inherited tbStep1: TTabItem
+            Size.Width = 57.000000000000000000
+            ExplicitSize.cx = 159.000000000000000000
+            ExplicitSize.cy = 49.000000000000000000
+            inherited ListBox1: TListBox
+              Viewport.Width = 320.000000000000000000
+              Viewport.Height = 148.000000000000000000
+              inherited ListBoxItem1: TListBoxItem
+                Selectable = False
+                Size.Height = 33.000000000000000000
+                Size.PlatformDefault = False
+                inherited edtApelido: TEdit
+                  Size.Height = 25.000000000000000000
+                end
+              end
+              inherited ListBoxItem2: TListBoxItem
+                Selectable = False
+                Position.Y = 33.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                inherited edtRazaoSocial: TEdit
+                  Size.Height = 24.000000000000000000
+                end
+              end
+            end
+          end
+          inherited tbStep2: TTabItem
+            Size.Width = 57.000000000000000000
+            ExplicitSize.cx = 159.000000000000000000
+            ExplicitSize.cy = 49.000000000000000000
+            inherited ListBox2: TListBox
+              Viewport.Width = 320.000000000000000000
+              Viewport.Height = 192.000000000000000000
+              inherited ListBoxItem3: TListBoxItem
+                Selectable = False
+                Size.Height = 33.000000000000000000
+                Size.PlatformDefault = False
+                inherited edtEndereco: TEdit
+                  Size.Height = 25.000000000000000000
+                end
+              end
+              inherited ListBoxItem4: TListBoxItem
+                Selectable = False
+                Position.Y = 33.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                inherited edtNumero: TEdit
+                  Size.Height = 24.000000000000000000
+                end
+              end
+              inherited ListBoxItem5: TListBoxItem
+                Position.Y = 65.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                inherited Layout1: TLayout
+                  Size.Height = 32.000000000000000000
+                  inherited cbxEstado: TComboEdit
+                    Size.Height = 24.000000000000000000
+                  end
+                end
+                inherited Layout2: TLayout
+                  Size.Height = 32.000000000000000000
+                  inherited cbxCidade: TComboEdit
+                    Size.Height = 24.000000000000000000
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+end

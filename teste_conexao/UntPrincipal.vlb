@@ -34,7 +34,8 @@ Coordinates=210,10,78,33
 Visible=False
 
 []
-Coordinates=118,132,138,33
+Coordinates=610,30,80,58
+Visible=False
 
 [BindSourceDB1]
 Coordinates=210,10,92,141
@@ -57,12 +58,35 @@ Coordinates=418,56,107,33
 [memClientesSOBRENOME]
 Coordinates=418,111,145,33
 
-[edtIDCliente]
-Coordinates=116,307,74,51
-
-[Button3]
-Coordinates=420,30,53,51
-
 [memClientesNOME]
 Coordinates=418,166,109,33
+
+[Button4]
+Coordinates=136,56,53,51
+
+[Button3]
+Coordinates=118,53,53,51
+
+[edtIDCliente]
+Coordinates=118,123,74,51
+
+[StringGrid1]
+Coordinates=450,50,70,51
+
+[StringGrid2]
+Coordinates=460,170,70,51
+
+[memPedidos]
+Coordinates=590,50,78,33
+Visible=False
+
+[memItens_Pedidos]
+Coordinates=600,180,108,33
+Visible=False
+
+[BindSourceDB2]
+Coordinates=590,50,92,69
+
+[BindSourceDB3]
+Coordinates=600,180,94,69
 

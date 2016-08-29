@@ -1,6 +1,6 @@
 //
 // Created by the DataSnap proxy generator.
-// 02/06/2016 22:59:40
+// 28/08/2016 21:55:27
 //
 
 unit Proxy;
@@ -24,6 +24,8 @@ type
     FGetClientePorIDCommand_Cache: TDSRestCommand;
     FGetPedidosEItensCommand: TDSRestCommand;
     FGetPedidosEItensCommand_Cache: TDSRestCommand;
+    FApplyUpdatesClienteCommand: TDSRestCommand;
+    FSincronizarNoServidorCommand: TDSRestCommand;
   public
     constructor Create(ARestConnection: TDSRestConnection); overload;
     constructor Create(ARestConnection: TDSRestConnection; AInstanceOwner: Boolean); overload;
@@ -37,6 +39,8 @@ type
     function GetClientePorID_Cache(AID: Integer; const ARequestFilter: string = ''): IDSRestCachedTFDJSONDataSets;
     function GetPedidosEItens(const ARequestFilter: string = ''): TFDJSONDataSets;
     function GetPedidosEItens_Cache(const ARequestFilter: string = ''): IDSRestCachedTFDJSONDataSets;
+    function ApplyUpdatesCliente(ADeltaList: TFDJSONDeltas; const ARequestFilter: string = ''): Boolean;
+    function SincronizarNoServidor(AForn: TFDJSONDataSets; const ARequestFilter: string = ''): Boolean;
   end;
 
   IDSRestCachedTFDJSONDataSets = interface(IDSRestCachedObject<TFDJSONDataSets>)
@@ -95,6 +99,18 @@ const
   TSrvMetodosGerais_GetPedidosEItens_Cache: array [0..0] of TDSRestParameterMetaData =
   (
     (Name: ''; Direction: 4; DBXType: 26; TypeName: 'String')
+  );
+
+  TSrvMetodosGerais_ApplyUpdatesCliente: array [0..1] of TDSRestParameterMetaData =
+  (
+    (Name: 'ADeltaList'; Direction: 1; DBXType: 37; TypeName: 'TFDJSONDeltas'),
+    (Name: ''; Direction: 4; DBXType: 4; TypeName: 'Boolean')
+  );
+
+  TSrvMetodosGerais_SincronizarNoServidor: array [0..1] of TDSRestParameterMetaData =
+  (
+    (Name: 'AForn'; Direction: 1; DBXType: 37; TypeName: 'TFDJSONDataSets'),
+    (Name: ''; Direction: 4; DBXType: 4; TypeName: 'Boolean')
   );
 
 implementation
@@ -258,6 +274,58 @@ begin
   Result := TDSRestCachedTFDJSONDataSets.Create(FGetPedidosEItensCommand_Cache.Parameters[0].Value.GetString);
 end;
 
+function TSrvMetodosGeraisClient.ApplyUpdatesCliente(ADeltaList: TFDJSONDeltas; const ARequestFilter: string): Boolean;
+begin
+  if FApplyUpdatesClienteCommand = nil then
+  begin
+    FApplyUpdatesClienteCommand := FConnection.CreateCommand;
+    FApplyUpdatesClienteCommand.RequestType := 'POST';
+    FApplyUpdatesClienteCommand.Text := 'TSrvMetodosGerais."ApplyUpdatesCliente"';
+    FApplyUpdatesClienteCommand.Prepare(TSrvMetodosGerais_ApplyUpdatesCliente);
+  end;
+  if not Assigned(ADeltaList) then
+    FApplyUpdatesClienteCommand.Parameters[0].Value.SetNull
+  else
+  begin
+    FMarshal := TDSRestCommand(FApplyUpdatesClienteCommand.Parameters[0].ConnectionHandler).GetJSONMarshaler;
+    try
+      FApplyUpdatesClienteCommand.Parameters[0].Value.SetJSONValue(FMarshal.Marshal(ADeltaList), True);
+      if FInstanceOwner then
+        ADeltaList.Free
+    finally
+      FreeAndNil(FMarshal)
+    end
+    end;
+  FApplyUpdatesClienteCommand.Execute(ARequestFilter);
+  Result := FApplyUpdatesClienteCommand.Parameters[1].Value.GetBoolean;
+end;
+
+function TSrvMetodosGeraisClient.SincronizarNoServidor(AForn: TFDJSONDataSets; const ARequestFilter: string): Boolean;
+begin
+  if FSincronizarNoServidorCommand = nil then
+  begin
+    FSincronizarNoServidorCommand := FConnection.CreateCommand;
+    FSincronizarNoServidorCommand.RequestType := 'POST';
+    FSincronizarNoServidorCommand.Text := 'TSrvMetodosGerais."SincronizarNoServidor"';
+    FSincronizarNoServidorCommand.Prepare(TSrvMetodosGerais_SincronizarNoServidor);
+  end;
+  if not Assigned(AForn) then
+    FSincronizarNoServidorCommand.Parameters[0].Value.SetNull
+  else
+  begin
+    FMarshal := TDSRestCommand(FSincronizarNoServidorCommand.Parameters[0].ConnectionHandler).GetJSONMarshaler;
+    try
+      FSincronizarNoServidorCommand.Parameters[0].Value.SetJSONValue(FMarshal.Marshal(AForn), True);
+      if FInstanceOwner then
+        AForn.Free
+    finally
+      FreeAndNil(FMarshal)
+    end
+    end;
+  FSincronizarNoServidorCommand.Execute(ARequestFilter);
+  Result := FSincronizarNoServidorCommand.Parameters[1].Value.GetBoolean;
+end;
+
 constructor TSrvMetodosGeraisClient.Create(ARestConnection: TDSRestConnection);
 begin
   inherited Create(ARestConnection);
@@ -279,6 +347,8 @@ begin
   FGetClientePorIDCommand_Cache.DisposeOf;
   FGetPedidosEItensCommand.DisposeOf;
   FGetPedidosEItensCommand_Cache.DisposeOf;
+  FApplyUpdatesClienteCommand.DisposeOf;
+  FSincronizarNoServidorCommand.DisposeOf;
   inherited;
 end;
 

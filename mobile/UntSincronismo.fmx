@@ -1,0 +1,76 @@
+object frmSincronismo: TfrmSincronismo
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 570
+  ClientWidth = 380
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object lytBase: TLayout
+    Align = Client
+    Size.Width = 380.000000000000000000
+    Size.Height = 570.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ToolBar1: TToolBar
+      Size.Width = 380.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Label1: TLabel
+        Align = Contents
+        Size.Width = 380.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'toollabel'
+        TextSettings.HorzAlign = Center
+        Text = 'Sincronismo'
+      end
+      object spbMenu: TSpeedButton
+        Align = Left
+        Margins.Left = 8.000000000000000000
+        Position.X = 8.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'backtoolbutton'
+      end
+    end
+    object ListBox1: TListBox
+      Align = Client
+      Size.Width = 380.000000000000000000
+      Size.Height = 522.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 380.000000000000000000
+      Viewport.Height = 522.000000000000000000
+      object ListBoxItem1: TListBoxItem
+        TabOrder = 0
+        Text = 'Clientes'
+        object btnClientes: TButton
+          Align = Right
+          Margins.Right = 8.000000000000000000
+          Position.X = 324.000000000000000000
+          Size.Width = 48.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'refreshtoolbutton'
+          TabOrder = 1
+          OnClick = btnClientesClick
+        end
+      end
+    end
+  end
+  object ksLoadingIndicator1: TksLoadingIndicator
+    LoadingText.Text = 'LOADING...'
+    LoadingText.Visible = True
+    Left = 200
+    Top = 160
+  end
+end

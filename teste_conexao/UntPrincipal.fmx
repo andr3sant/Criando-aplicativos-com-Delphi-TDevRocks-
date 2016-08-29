@@ -66,16 +66,16 @@ object Form1: TForm1
     ItemEditAppearanceClassName = 'TMultiDetailDeleteAppearance'
     HeaderAppearanceClassName = 'TListHeaderObjects'
     FooterAppearanceClassName = 'TListHeaderObjects'
-    Position.X = 8.000000000000000000
-    Position.Y = 176.000000000000000000
+    Position.X = 136.000000000000000000
+    Position.Y = 64.000000000000000000
     Size.Width = 281.000000000000000000
-    Size.Height = 289.000000000000000000
+    Size.Height = 97.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 10
   end
   object Button2: TButton
-    Position.X = 304.000000000000000000
-    Position.Y = 176.000000000000000000
+    Position.X = 464.000000000000000000
+    Position.Y = 40.000000000000000000
     Size.Width = 161.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
@@ -83,24 +83,58 @@ object Form1: TForm1
     Text = 'Carregar Todos'
     OnClick = Button2Click
   end
-  object Button3: TButton
-    Position.X = 304.000000000000000000
-    Position.Y = 240.000000000000000000
+  object Button4: TButton
+    Position.X = 464.000000000000000000
+    Position.Y = 136.000000000000000000
     Size.Width = 161.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 12
-    Text = 'Carregar por ID'
-    OnClick = Button3Click
+    TabOrder = 17
+    Text = 'Pedidos e Itens'
+    OnClick = Button4Click
   end
   object edtIDCliente: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 13
-    Position.X = 304.000000000000000000
-    Position.Y = 216.000000000000000000
+    TabOrder = 24
+    Position.X = 464.000000000000000000
+    Position.Y = 72.000000000000000000
     Size.Width = 161.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
+  end
+  object Button3: TButton
+    Position.X = 464.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 25
+    Text = 'Carregar by ID'
+    OnClick = Button3Click
+  end
+  object StringGrid1: TStringGrid
+    CanFocus = True
+    ClipChildren = True
+    Position.X = 8.000000000000000000
+    Position.Y = 184.000000000000000000
+    Size.Width = 329.000000000000000000
+    Size.Height = 289.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 31
+    Viewport.Width = 325.000000000000000000
+    Viewport.Height = 264.000000000000000000
+  end
+  object StringGrid2: TStringGrid
+    CanFocus = True
+    ClipChildren = True
+    Position.X = 344.000000000000000000
+    Position.Y = 184.000000000000000000
+    Size.Width = 281.000000000000000000
+    Size.Height = 289.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 32
+    Viewport.Width = 277.000000000000000000
+    Viewport.Height = 264.000000000000000000
   end
   object memClientes: TFDMemTable
     FetchOptions.AssignedValues = [evMode]
@@ -110,8 +144,8 @@ object Form1: TForm1
     UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
     UpdateOptions.CheckRequired = False
     UpdateOptions.AutoCommitUpdates = True
-    Left = 544
-    Top = 232
+    Left = 120
+    Top = 80
     object memClientesNOME: TStringField
       FieldName = 'NOME'
       Origin = 'NOME'
@@ -136,14 +170,14 @@ object Form1: TForm1
   object BindSourceDB1: TBindSourceDB
     DataSet = memClientes
     ScopeMappings = <>
-    Left = 536
-    Top = 120
+    Left = 40
+    Top = 128
   end
   object BindingsList1: TBindingsList
     Methods = <>
     OutputConverters = <>
-    Left = 540
-    Top = 173
+    Left = 120
+    Top = 21
     object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
@@ -165,13 +199,59 @@ object Form1: TForm1
       FillHeaderExpressions = <>
       FillBreakGroups = <>
     end
+    object LinkGridToDataSourceBindSourceDB2: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB2
+      GridControl = StringGrid1
+      Columns = <>
+    end
+    object LinkGridToDataSourceBindSourceDB3: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB3
+      GridControl = StringGrid2
+      Columns = <>
+    end
   end
   object FDStanStorageBinLink1: TFDStanStorageBinLink
-    Left = 536
-    Top = 16
+    Left = 40
+    Top = 24
   end
   object FDStanStorageJSONLink1: TFDStanStorageJSONLink
-    Left = 536
-    Top = 72
+    Left = 40
+    Top = 80
+  end
+  object memPedidos: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 104
+    Top = 280
+  end
+  object memItens_Pedidos: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 472
+    Top = 280
+  end
+  object BindSourceDB2: TBindSourceDB
+    DataSet = memPedidos
+    ScopeMappings = <>
+    Left = 304
+    Top = 224
+  end
+  object BindSourceDB3: TBindSourceDB
+    DataSet = memItens_Pedidos
+    ScopeMappings = <>
+    Left = 312
+    Top = 232
   end
 end

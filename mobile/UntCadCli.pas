@@ -27,7 +27,6 @@ type
     lsviewLista: TListView;
     BindSourceDB1: TBindSourceDB;
     BindingsList1: TBindingsList;
-    LinkListControlToField1: TLinkListControlToField;
     tbctrlEdicao: TTabControl;
     tbitemStep1: TTabItem;
     tbitemStep2: TTabItem;
@@ -49,20 +48,18 @@ type
     spbEditar: TSpeedButton;
     lblTituloEdicao: TLabel;
     spbInserir: TSpeedButton;
-    LinkControlToField1: TLinkControlToField;
-    LinkControlToField2: TLinkControlToField;
     imgFotoCli: TImage;
     ListBoxItem7: TListBoxItem;
     edtTelefone: TEdit;
-    LinkPropertyToFieldBitmap: TLinkPropertyToField;
-    LinkControlToField3: TLinkControlToField;
-    LinkControlToField4: TLinkControlToField;
-    LinkControlToField5: TLinkControlToField;
     actFotoBiblioteca: TTakePhotoFromLibraryAction;
     actFotoCamera: TTakePhotoFromCameraAction;
     fgActionSheet1: TfgActionSheet;
     toolStep1: TToolBar;
     toolStep2: TToolBar;
+    BindSourceDB2: TBindSourceDB;
+    LinkListControlToField1: TLinkListControlToField;
+    LinkControlToField1: TLinkControlToField;
+    LinkControlToField2: TLinkControlToField;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure lsviewListaItemClick(const Sender: TObject;
@@ -95,13 +92,14 @@ uses UntDM, UntPrincipal;
 procedure TfrmCadCli.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   inherited;
-  DM.qryClientes.Active := False;
+  DM.memClientes.Active := False;
 end;
 
 procedure TfrmCadCli.FormCreate(Sender: TObject);
 begin
   inherited;
-  DM.qryClientes.Active       := True;
+  //DM.qryClientes.Active       := True;
+  DM.CarregarClientes;
   tbctrlPrincipal.ActiveTab   := tbitemListagem;
   tbctrlEdicao.ActiveTab      := tbitemStep1;
   tbctrlPrincipal.TabPosition := TTabPosition.None;
@@ -112,8 +110,8 @@ end;
 procedure TfrmCadCli.imgFotoCliClick(Sender: TObject);
 begin
   inherited;
-  if not (DM.qryClientes.State in dsEditModes)  then
-    DM.qryClientes.Edit;
+  if not (DM.memClientes.State in dsEditModes)  then
+    DM.memClientes.Edit;
 
   AtivarDesativarBotoes(Sender);
 
@@ -125,7 +123,7 @@ begin
       if Execute then
       begin
         imgFotoCli.Bitmap.LoadFromFile(FileName);
-        DM.qryClientesFOTO.Assign(imgFotoCli.Bitmap);
+        //DM.memClientesFOTO.Assign(imgFotoCli.Bitmap);
       end;
     end;
   {$ELSE}
@@ -152,7 +150,7 @@ end;
 procedure TfrmCadCli.spbEditarClick(Sender: TObject);
 begin
   inherited;
-  DM.qryClientes.Edit;
+  DM.memClientes.Edit;
   MudarAba(tbitemStep1, Sender);
   edtApelido.SetFocus;
   AtivarDesativarBotoes(Sender);
@@ -161,7 +159,8 @@ end;
 procedure TfrmCadCli.spbGravarClick(Sender: TObject);
 begin
   inherited;
-  DM.qryClientes.Post;
+  DM.memClientes.Post;
+  DM.AppyUpdatesRemoto;
   MudarAba(tbitemListagem, Sender);
   AtivarDesativarBotoes(Sender);
 end;
@@ -169,8 +168,8 @@ end;
 procedure TfrmCadCli.spbInserirClick(Sender: TObject);
 begin
   inherited;
-  DM.qryClientes.Append;
-  DM.qryClientesID.AsString := frmPrincipal.FLib.GetObjectID;
+  DM.memClientes.Append;
+  //DM.memClientesID.AsString := frmPrincipal.FLib.GetObjectID;
   MudarAba(tbitemStep1, Sender);
   MudarAba(tbitemEdicao, Sender);
   edtApelido.SetFocus;
@@ -192,8 +191,8 @@ end;
 procedure TfrmCadCli.spbVoltarListaClick(Sender: TObject);
 begin
   inherited;
-  if DM.qryClientes.State in dsEditModes then
-    DM.qryClientes.Cancel;
+  if DM.memClientes.State in dsEditModes then
+    DM.memClientes.Cancel;
 
   MudarAba(tbitemListagem, Sender);
   AtivarDesativarBotoes(Sender);
@@ -203,14 +202,14 @@ procedure TfrmCadCli.actFotoBibliotecaDidFinishTaking(Image: TBitmap);
 begin
   inherited;
   imgFotoCli.Bitmap.Assign(Image);
-  DM.qryClientesFOTO.Assign(Image);
+  //DM.memClientesFOTO.Assign(Image);
 end;
 
 procedure TfrmCadCli.actFotoCameraDidFinishTaking(Image: TBitmap);
 begin
   inherited;
   imgFotoCli.Bitmap.Assign(Image);
-  DM.qryClientesFOTO.Assign(Image);
+  //DM.memClientesFOTO.Assign(Image);
 end;
 
 procedure TfrmCadCli.AtivarDesativarBotoes(Sender: TObject);
@@ -221,16 +220,16 @@ begin
   spbGravar.Width        := 70;
   spbVoltarLista.Width   := 70;
   //Botões
-  spbGravar.Enabled      :=     (DM.qryClientes.State in dsEditModes);
-  spbEditar.Visible      := not (DM.qryClientes.State in dsEditModes);
+  spbGravar.Enabled      :=     (DM.memClientes.State in dsEditModes);
+  spbEditar.Visible      := not (DM.memClientes.State in dsEditModes);
   //Caixas de Texto
-  edtApelido.Enabled     :=     (DM.qryClientes.State in dsEditModes);
-  edtRazaoSocial.Enabled :=     (DM.qryClientes.State in dsEditModes);
-  edtCNPJ.Enabled        :=     (DM.qryClientes.State in dsEditModes);
-  edtCelular.Enabled     :=     (DM.qryClientes.State in dsEditModes);
-  edtTelefone.Enabled    :=     (DM.qryClientes.State in dsEditModes);
+  edtApelido.Enabled     :=     (DM.memClientes.State in dsEditModes);
+  edtRazaoSocial.Enabled :=     (DM.memClientes.State in dsEditModes);
+  edtCNPJ.Enabled        :=     (DM.memClientes.State in dsEditModes);
+  edtCelular.Enabled     :=     (DM.memClientes.State in dsEditModes);
+  edtTelefone.Enabled    :=     (DM.memClientes.State in dsEditModes);
 
-  if (DM.qryClientes.State in dsEditModes) then
+  if (DM.memClientes.State in dsEditModes) then
   begin
     edtApelido.StyleLookup     := EmptyStr;
     edtRazaoSocial.StyleLookup := EmptyStr;
@@ -238,7 +237,7 @@ begin
     edtCelular.StyleLookup     := EmptyStr;
     edtTelefone.StyleLookup    := EmptyStr;
     //Modifica o Caption do título
-    case DM.qryClientes.State of
+    case DM.memClientes.State of
       dsInsert : lblTituloEdicao.Text := 'Incluindo';
       dsEdit   : lblTituloEdicao.Text := 'Editando';
     end;

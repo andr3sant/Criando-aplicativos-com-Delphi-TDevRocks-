@@ -1,34 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
+    <Transaction>1899/12/30 00:00:00.000.081,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.981,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.703,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCadModelo.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.515,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCadCli.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.504,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntDM.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.324,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
     <Transaction>1899/12/30 00:00:00.000.736,C:\1 - TDevRocks Curso - on-line\mobile\VendasApp.dproj=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>1899/12/30 00:00:00.000.567,C:\1 - TDevRocks Curso - on-line\mobile\UntPrincipal.fmx=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.769,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.515,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.fmx=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCadCli.fmx</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.771,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.390,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Lib\Lib.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.666,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.567,C:\1 - TDevRocks Curso - on-line\mobile\UntPrincipal.pas=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.357,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899/12/30 00:00:00.000.703,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.fmx=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCadModelo.fmx</Transaction>
     <Transaction>1899/12/30 00:00:00.000.504,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.dfm=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntDM.dfm</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.391,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.821,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.357,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.678,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.515,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.fmx=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCadCli.fmx</Transaction>
     <Transaction>1899/12/30 00:00:00.000.019,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.769,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.821,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.678,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.391,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899/12/30 00:00:00.000.616,=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.666,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.324,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.981,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.567,C:\1 - TDevRocks Curso - on-line\mobile\UntPrincipal.pas=C:\Users\asrsa\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.703,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCadModelo.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.504,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntDM.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.390,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Lib\Lib.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.515,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCadCli.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.081,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.771,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
     <Transaction>2016/03/31 21:32:15.000.621,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
-    <Transaction>2016/03/31 21:33:21.000.398,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntPedidos.pas</Transaction>
     <Transaction>2016/03/31 21:33:21.000.398,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.fmx=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntPedidos.fmx</Transaction>
+    <Transaction>2016/03/31 21:33:21.000.398,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntPedidos.pas</Transaction>
+    <Transaction>2016/06/29 21:36:03.000.655,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntSincronismo.pas</Transaction>
+    <Transaction>2016/06/29 22:23:15.000.303,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2016/06/29 22:23:22.000.366,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\ClientModuleUnit1.pas</Transaction>
+    <Transaction>2016/06/29 22:24:10.000.541,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCM.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\ClientModuleUnit1.pas</Transaction>
+    <Transaction>2016/06/29 22:24:10.000.541,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCM.dfm=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\ClientModuleUnit1.dfm</Transaction>
+    <Transaction>2016/06/29 22:24:30.000.611,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Proxy.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2016/06/29 22:30:37.000.883,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Proxy.pas=</Transaction>
+    <Transaction>2016/06/29 22:30:44.000.872,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCM.pas=</Transaction>
+    <Transaction>2016/06/29 22:32:07.000.071,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2016/06/29 22:32:08.000.661,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\ClientModuleUnit1.pas</Transaction>
+    <Transaction>2016/06/29 22:32:34.000.225,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCM.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\ClientModuleUnit1.pas</Transaction>
+    <Transaction>2016/06/29 22:32:34.000.225,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntCM.dfm=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\ClientModuleUnit1.dfm</Transaction>
+    <Transaction>2016/06/29 22:32:52.000.226,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Proxy.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\ClientClassesUnit1.pas</Transaction>
+    <Transaction>2016/08/28 18:41:25.077,=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
+    <Transaction>2016/08/28 18:41:41.917,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntForn.fmx=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.fmx</Transaction>
+    <Transaction>2016/08/28 18:41:41.917,C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\UntForn.pas=C:\TDevRocks\Curso - Criando aplicativos moveis com Delphi\mobile\Unit1.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile Android="0434191710" iOSSimulator="iPhone5"/>
+		<NoProfile Android="0023109677" iOSSimulator="iPhone5"/>
 		<PMac-Home iOSSimulator="iPhone5" iOSDevice32="_iosdevice_95648ad9fc5e0abcae8724b68762680ffa621f37" iOSDevice64="_iosdevice_95648ad9fc5e0abcae8724b68762680ffa621f37"/>
 		<PMacVirtual iOSSimulator="iPhone5"/>
 		<PMacRedeiPhone iOSSimulator="iPhone5"/>
